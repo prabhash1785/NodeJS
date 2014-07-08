@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1>Weather Forecast for <%=weatherInfo.current_observation.display_location.city%></h1>
+<div id="weatherinfo">
+
+    <table border="1">
+
+        <tr>
+            <td>City</td>
+            <td>State</td>
+            <td>Country</td>
+            <td>Local Time</td>
+            <td>Weather</td>
+            <td>Temperature</td>
+            <td>Relative Humidity</td>
+            <td>Wind</td>
+            <td>Precipitation Today</td>
+        </tr>
+
+        <tr>
+            <td><%=weatherInfo.current_observation.display_location.city%></td>
+            <td><%=weatherInfo.current_observation.display_location.state%></td>
+            <td><%=weatherInfo.current_observation.display_location.country%></td>
+            <td><%=weatherInfo.current_observation.local_time_rfc822%></td>
+            <td><%=weatherInfo.current_observation.weather%><br><img src=<%=weatherInfo.current_observation.icon_url%> alt="Weather_Icon"></td>
+            <td><%=weatherInfo.current_observation.temperature_string%></td>
+            <td><%=weatherInfo.current_observation.relative_humidity%></td>
+            <td><%=weatherInfo.current_observation.wind_string%></td>
+            <td><%=weatherInfo.current_observation.precip_today_string%></td>
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+</html>

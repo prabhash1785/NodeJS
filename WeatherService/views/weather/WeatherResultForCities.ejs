@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1>Weather Forecast</h1>
+<div id="weatherinfo">
+
+    <table border="1">
+
+        <tr>
+            <td>City</td>
+            <td>State</td>
+            <td>Country</td>
+            <td>Local Time</td>
+            <td>Weather</td>
+            <td>Temperature</td>
+            <td>Relative Humidity</td>
+            <td>Wind</td>
+            <td>Precipitation Today</td>
+        </tr>
+
+        <% weatherInfo.forEach(function(weather) { %>
+
+        <tr>
+            <td><%=weather.current_observation.display_location.city%></td>
+            <td><%=weather.current_observation.display_location.state%></td>
+            <td><%=weather.current_observation.display_location.country%></td>
+            <td><%=weather.current_observation.local_time_rfc822%></td>
+            <td><%=weather.current_observation.weather%><br><img src=<%=weather.current_observation.icon_url%> alt="Weather_Icon"></td>
+            <td><%=weather.current_observation.temperature_string%></td>
+            <td><%=weather.current_observation.relative_humidity%></td>
+            <td><%=weather.current_observation.wind_string%></td>
+            <td><%=weather.current_observation.precip_today_string%></td>
+        </tr>
+
+        <% }) %>
+
+    </table>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=settings.title%></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <script type="text/javascript">
+        function validateForm() {
+            var city1 = document.getElementById("city1").value.trim();
+            if(city1.length == 0) {
+                alert("City name can't be blank!!");
+                document.getElementById("city1").focus();
+                return false;
+            }
+
+            var state1 = document.getElementById("state1").value.trim();
+            if(state1.length == 0) {
+                alert("State name can't be blank!!");
+                document.getElementById("state1").focus();
+                return false;
+            }
+
+            return true;
+        }
+
+    </script>
+
+</head>
+<body>
+<h1>Weather Service</h1>
+
+<!-- Display the error message if search fails on the server side -->
+<% if(error != null) { %>
+<p class="error"><%=error%></p>
+<% } %>
+
+<p>Please enter values for at least first city and state to get the weather details:</p>
+
+<form action="http://127.0.0.1:3000/getWeatherForCities" onsubmit="return validateForm()" method="get">
+
+    <div>
+        <label><span class="mandatory">*</span>City 1:</label> <input type="text" name="city1" id="city1" />
+        <br />
+        <label><span class="mandatory">*</span>State 1:</label> <input type="text" name="state1" id="state1" />
+        <br />
+        <label>Country 1:</label> <input type="text" name="country1" id="country1" value="US"/>
+    </div>
+
+    <div>
+        <label><span class="mandatory">*</span>City 2:</label> <input type="text" name="city2" id="city2" />
+        <br />
+        <label><span class="mandatory">*</span>State 2:</label> <input type="text" name="state2" id="state2" />
+        <br />
+        <label>Country 2:</label> <input type="text" name="country2" id="country2" value="US"/>
+    </div>
+
+    <div>
+        <label><span class="mandatory">*</span>City 3:</label> <input type="text" name="city3" id="city3" />
+        <br />
+        <label><span class="mandatory">*</span>State 3:</label> <input type="text" name="state3" id="state3" />
+        <br />
+        <label>Country 3:</label> <input type="text" name="country3" id="country3" value="US"/>
+    </div>
+
+    <div>
+        <label><span class="mandatory">*</span>City 4:</label> <input type="text" name="city4" id="city4" />
+        <br />
+        <label><span class="mandatory">*</span>State 4:</label> <input type="text" name="state4" id="state4" />
+        <br />
+        <label>Country 4:</label> <input type="text" name="country4" id="country4" value="US"/>
+    </div>
+
+    <div>
+        <span  class="form-field-no-caption"/><button type="submit" align="center">Show Weather Info</button>
+    </div>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+body {
+    padding: 50px;
+    font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+a {
+    color: #00B7FF;
+}
+label {
+    float: left;
+    width: 75px;
+    text-align: right;
+    margin-right: 0.5em;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+div {
+    padding: 10px;
+    font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+button {
+    padding:5px 15px; background:#ccc; border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.form-field-no-caption {
+    margin-left:    75px;
+    padding-left: 0.5em;
+}
+.mandatory {
+    font-weight: bold;
+    font-style: normal;
+    color: #f00;
+}
+.error {
+    font-size: 14px;
+    color: red;
+    font-weight: 200;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=settings.title%></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <script type="text/javascript">
+        function validateForm() {
+            var city = document.getElementById("city").value.trim();
+            if(city.length == 0) {
+                alert("City name can't be blank!!");
+                document.getElementById("city").focus();
+                return false;
+            }
+
+            var state = document.getElementById("state").value.trim();
+            if(state.length == 0) {
+                alert("State name can't be blank!!");
+                document.getElementById("state").focus();
+                return false;
+            }
+
+            return true;
+        }
+
+    </script>
+
+</head>
+<body>
+<h1>Weather Service</h1>
+
+<% if(error != null) { %>
+<p class="error"><%=error%></p>
+<% } %>
+
+<p>Please enter the below details to find the weather details:</p>
+
+<form action="http://127.0.0.1:3000/getWeather" onsubmit="return validateForm()" method="get">
+
+    <label><span class="mandatory">*</span>City:</label> <input type="text" name="city" id="city" />
+    <br />
+    <label><span class="mandatory">*</span>State:</label> <input type="text" name="state" id="state" />
+    <br />
+    <label>Country:</label> <input type="text" name="country" id="country" value="US"/>
+    <br />
+    <span  class="form-field-no-caption"/><button type="submit" align="center">Show Weather Info</button>
+
+</form>
+
+</body>
+</html>
