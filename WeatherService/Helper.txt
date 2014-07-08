@@ -1,0 +1,29 @@
+WeatherService is a web application developed using Node.js platform. It uses Express framework and EJS for templating  
+web pages.
+
+This application takes City/State/Country as input and displays the weather condition for that city. To get the weather 
+details, it uses Weather Underground API (http://www.wunderground.com/).
+
+It has two paths:
+- First path takes one city as input and returns the weather for that city:
+
+To go to this path, just type this in your browser (after you start Node server): http://127.0.0.1:3000
+
+- Second path can accept upto four cities in request and return their weather details using one API call to Node server.
+
+To go to this path, type this in your browser (after you start Node server): http://127.0.0.1:3000/weatherSearchForCities
+
+
+Application Set up:
+- Download and install Node.js on your machine (http://nodejs.org/)
+- Install Express: npm install express
+- Clone this project on your computer
+- Restart the Node server by following steps:
+  - Go to this relative directory "WeatherService\bin" on command line and run this command: node www
+  
+- Once Node server is restarted, you can access the application using one of the following paths:
+http://127.0.0.1:3000
+
+or,
+
+http://127.0.0.1:3000/weatherSearchForCities
