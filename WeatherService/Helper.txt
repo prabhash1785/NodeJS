@@ -22,8 +22,8 @@ Application Set up:
   - Go to this relative directory "WeatherService\bin" on command line and run this command: node www
   
 - Once Node server is restarted, you can access the application using one of the following paths:
-http://127.0.0.1:3000
+http://127.0.0.1:3000 (Search for one city at one time)
 
 or,
 
-http://127.0.0.1:3000/weatherSearchForCities
+http://127.0.0.1:3000/weatherSearchForCities (Search for four cities at one time)
