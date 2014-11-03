@@ -1,10 +1,11 @@
 
 
 # NodeCodeSnippet
-
+This is a project where I ahve written sample code to show the usage of some of Node modules and methods.
 
 
 ## Usage
+Used as a reference to use Node modules.
 
 
 
