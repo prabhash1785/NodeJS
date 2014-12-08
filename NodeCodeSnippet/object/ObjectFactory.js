@@ -28,3 +28,16 @@ console.log("Values associated with Person object: ");
 for(var i in c) {
     console.log("i = " + i );
 }
+
+Person.prototype.color = 'yellow';
+
+//Play more with prototype object
+var max = new Person(10, 'Max', 4);
+max.breed = 'Lab';
+
+var messer = new Person(20, 'Messer', 5);
+
+console.log("Max: " + JSON.stringify(max ));
+console.log("Messer: " + JSON.stringify(messer));
+
+
