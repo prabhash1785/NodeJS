@@ -65,7 +65,7 @@ suite('Data Model Test Suite', function() {
         console.log("b: " + JSON.stringify(b));
 
         assert.equal(b.member2, 'member2');
-        assert.equal(b.member3, 'member3');
+        assert.notEqual(b.member3, 'member3');
     });
 
 });
