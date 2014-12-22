@@ -56,3 +56,10 @@ exports.d = function() {
         month : 'December'
     }
 }
+
+//print exports and module.exports
+console.log("exports: " + JSON.stringify(exports));
+console.log("module.exports: " + JSON.stringify(module.exports));
+
+var flag = exports === module.exports;
+console.log("Is exports === module.exports: " + flag);
