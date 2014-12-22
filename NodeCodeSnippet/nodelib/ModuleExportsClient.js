@@ -11,3 +11,4 @@ console.log("value of m: " + JSON.stringify(m));
 
 
 console.log("function1: " + m.function1());
+console.log("function2: " + m.function2);
