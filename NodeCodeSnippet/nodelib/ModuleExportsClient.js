@@ -6,4 +6,8 @@
 
 var m = require('./ModuleExports');
 
-console.log("value of m: " + m());
+console.log("value of m: " + JSON.stringify(m));
+//console.log("m(): " + m()); //results in exception as module.exports has an object not a function
+
+
+console.log("function1: " + m.function1());

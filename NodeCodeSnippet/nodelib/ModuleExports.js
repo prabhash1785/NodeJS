@@ -28,3 +28,31 @@ module.exports = function() {
     console.log("exports 3..");
     return 3;
 }
+
+var function1 = function() {
+    console.log("function1");
+    return 'function1';
+}
+
+var function2 = function() {
+    console.log("function2");
+    return 'function2';
+}
+
+var object1 = {
+    o1 : 'obj1',
+    o2 : 'obj2'
+};
+
+var object2 = {
+    l1 : 'l1',
+    l2 : 'l2'
+};
+
+//multiple functions and objects can be linked to module.exports as follows
+module.exports = {
+    function1: function1,
+    function2 : function2,
+    object1 : object1,
+    object2 : object2
+};
