@@ -49,6 +49,10 @@ var object2 = {
     l2 : 'l2'
 };
 
+exports.one = {
+    one : 'one'
+};
+
 //multiple functions and objects can be linked to module.exports as follows
 module.exports = {
     function1: function1,
@@ -56,3 +60,6 @@ module.exports = {
     object1 : object1,
     object2 : object2
 };
+
+console.log("exports: " + JSON.stringify(exports));
+console.log("module.exports: " + JSON.stringify(module.exports));
