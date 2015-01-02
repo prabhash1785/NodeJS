@@ -26,3 +26,8 @@ console.log(commander.foo); //15
 console.log(commander.bar); //10
 console.log(commander.baz); //undefined
 
+//use of util module
+var util = require('util');
+
+util.log("Node is Awesome!!"); //util.log adds a timestamp to log statements
+
