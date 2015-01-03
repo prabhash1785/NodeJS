@@ -4,6 +4,7 @@
  * Created by prrathore on 1/1/15.
  */
 
+
 function size() {
     var columns = process.stdout.columns;
     var rows = process.stdout.rows;
