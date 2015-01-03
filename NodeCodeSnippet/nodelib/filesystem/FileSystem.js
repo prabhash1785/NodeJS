@@ -19,3 +19,20 @@ console.log("Full Directory Path: " + fullPath);
 
 
 //fs module
+var fs = require('fs');
+
+//synchronous file check
+var fileName = '../CommandLine.js';
+var fileExists = fs.existsSync(fileName);
+console.log("File Exist check synchronously: " + fileExists);
+
+//asynchronous file check
+fs.exists(fileName, function(exists) {
+    if(exists) {
+        console.log("File exists!!");
+    } else {
+        console.log("File doesn't exist");
+    }
+});
+console.log("Asynchronously checking if file exists!!");
+
