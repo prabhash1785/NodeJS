@@ -48,3 +48,16 @@ fs.stat(path1, function(error, stats) {
     }
 });
 
+//watch for file changes
+fs.watch(path1, {
+    persistent: true
+}, function(event, filename) {
+    console.log("event is: " + event);
+    console.log("Filename for which event was generated: " + filename);
+    if (event === "rename") {
+        console.log("The file was renamed/deleted.");
+    } else if (event === "change") {
+        console.log("The file was changed.");
+    }
+});
+
