@@ -36,3 +36,15 @@ fs.exists(fileName, function(exists) {
 });
 console.log("Asynchronously checking if file exists!!");
 
+//check if a given path is a file or directory
+var path1 = '../CommandLine.js';
+fs.stat(path1, function(error, stats) {
+    if (error) {
+        console.error("stat error:  " + error.message);
+    } else {
+        console.log("stats: " + JSON.stringify(stats, null, 4));
+        console.log("Is File: " + stats.isFile());
+        console.log("Is Directory: " + stats.isDirectory());
+    }
+});
+
