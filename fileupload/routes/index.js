@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
   res.render('datauploadform', { title: 'Upload File' });
 });
 
-router.post('/upload', function (req, res) {
+router.post('/uploadwithmulter', function (req, res) {
 
     console.log("File Uploaded");
 
@@ -19,6 +19,14 @@ router.post('/upload', function (req, res) {
     var files = req.files;
     console.log("Files: " + JSON.stringify(files));
 
+
+    res.render('datauploadform', {status : 'File uploaded!!'});
+
+});
+
+router.post('/upload', function (req, res) {
+
+    console.log("File Uploaded!!");
 
     res.render('datauploadform', {status : 'File uploaded!!'});
 
