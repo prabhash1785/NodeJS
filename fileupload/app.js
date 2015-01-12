@@ -10,8 +10,6 @@ var cons = require('consolidate');
 
 var multer = require('multer');
 
-//var dustjs = require('adaro');
-
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -24,9 +22,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('dust', cons.dust);
 app.set('view engine', 'dust');
 app.set('template_engine', 'dust');
-
-//app.engine('dust', dustjs.dust({ ... });
-//app.set('view engine', 'dust');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
