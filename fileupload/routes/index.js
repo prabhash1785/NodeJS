@@ -24,9 +24,13 @@ router.post('/uploadwithmulter', function (req, res) {
 
 });
 
-router.post('/upload', function (req, res) {
+router.post('/uploadwithssh', function (req, res) {
 
-    console.log("File Uploaded!!");
+    var file = req.files.file.path;
+    console.log("Going to move this file to remote server using ssh2: " + file);
+
+    var fileTransfer = require('./filetransferwithssh')();
+
 
     res.render('datauploadform', {status : 'File uploaded!!'});
 

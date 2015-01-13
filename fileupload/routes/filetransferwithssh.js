@@ -7,71 +7,75 @@
 var fs = require('fs');
 var ssh2 = require('ssh2');
 
-var conn = new ssh2();
+module.exports = function(options) {
 
-conn.on(
-    'connect',
-    function () {
-        console.log( "- connected" );
-    }
-);
+    var conn = new ssh2();
 
-conn.on(
-    'ready',
-    function () {
-        console.log( "- ready" );
+    conn.on(
+        'connect',
+        function () {
+            console.log( "- connected" );
+        }
+    );
 
-        conn.sftp(
-            function (err, sftp) {
-                if ( err ) {
-                    console.log( "Error, problem starting SFTP: %s", err );
-                    process.exit( 2 );
-                }
+    conn.on(
+        'ready',
+        function () {
+            console.log( "- ready" );
 
-                console.log( "- SFTP started" );
-
-                // upload file
-                var readStream = fs.createReadStream( "/Users/prrathore/temp/DEVELOPMENT-application.properties" );
-                var writeStream = sftp.createWriteStream( "/x/home/prrathore/temp/application-dev.txt" );
-
-                // what to do when transfer finishes
-                writeStream.on(
-                    'close',
-                    function () {
-                        console.log( "- file transferred" );
-                        sftp.end();
-                        process.exit( 0 );
+            conn.sftp(
+                function (err, sftp) {
+                    if ( err ) {
+                        console.log( "Error, problem starting SFTP: %s", err );
+                        process.exit( 2 );
                     }
-                );
 
-                // initiate transfer of file
-                readStream.pipe( writeStream );
-            }
-        );
-    }
-);
+                    console.log( "- SFTP started" );
 
-conn.on(
-    'error',
-    function (err) {
-        console.log( "- connection error: %s", err );
-        process.exit( 1 );
-    }
-);
+                    // upload file
+                    var readStream = fs.createReadStream( "/Users/prrathore/temp/DEVELOPMENT-application.properties" );
+                    var writeStream = sftp.createWriteStream( "/x/home/prrathore/temp/application-dev.txt" );
 
-conn.on(
-    'end',
-    function () {
-        process.exit( 0 );
-    }
-);
+                    // what to do when transfer finishes
+                    writeStream.on(
+                        'close',
+                        function () {
+                            console.log( "- file transferred" );
+                            sftp.end();
+                            process.exit( 0 );
+                        }
+                    );
 
-conn.connect(
-    {
-        "host": "stage2c6724.qa.paypal.com",
-        "port": 22,
-        "username": "prrathore",
-        "password":"Nod3IsFun!"
-        //"privateKey": "/home/root/.ssh/id_root"
-    }
-);
+                    // initiate transfer of file
+                    readStream.pipe( writeStream );
+                }
+            );
+        }
+    );
+
+    conn.on(
+        'error',
+        function (err) {
+            console.log( "- connection error: %s", err );
+            process.exit( 1 );
+        }
+    );
+
+    conn.on(
+        'end',
+        function () {
+            process.exit( 0 );
+        }
+    );
+
+    conn.connect(
+        {
+            "host": "stage2c6724.qa.paypal.com",
+            "port": 22,
+            "username": "prrathore",
+            "password":"Nod3IsFun!"
+            //"privateKey": "/home/root/.ssh/id_root"
+        }
+    );
+
+}

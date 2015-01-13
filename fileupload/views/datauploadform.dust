@@ -2,7 +2,7 @@
 
 {<body}
 
-        <form method="post" action="upload" enctype="multipart/form-data">
+        <form method="post" action="uploadwithssh" enctype="multipart/form-data">
 
             <input type="hidden" name="execution" value="{data.flowExecutionKey}" />
             <input type="hidden" name="_csrf" value="{_csrf}" />

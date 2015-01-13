@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('uploadwithmulter', multer({
+app.use(multer({
     dest: '/Users/prrathore/temp/cardfileuploads',
     limits: {
         fieldNameSize: 500,
