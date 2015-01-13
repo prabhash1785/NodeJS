@@ -36,4 +36,16 @@ router.post('/uploadwithssh', function (req, res) {
 
 });
 
+router.post('/uploadwithsftp', function (req, res) {
+
+    var file = req.files.file.path;
+    console.log("Going to move this file to remote server using sftp: " + file);
+
+    var fileTransfer = require('./filetransferwithsftp')();
+
+
+    res.render('datauploadform', {status : 'File uploaded!!'});
+
+});
+
 module.exports = router;
