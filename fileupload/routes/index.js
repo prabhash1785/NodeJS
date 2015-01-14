@@ -48,4 +48,15 @@ router.post('/uploadwithsftp', function (req, res) {
 
 });
 
+router.post('/uploadwithscp', function (req, res) {
+
+    var file = req.files.file.path;
+    console.log("Going to move this file to remote server using scp: " + file);
+
+    var fileTransfer = require('./filetransferwithscp');
+
+    res.render('datauploadform', {status : 'File uploaded!!'});
+
+});
+
 module.exports = router;
