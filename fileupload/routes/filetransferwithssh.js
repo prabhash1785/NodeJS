@@ -73,8 +73,8 @@ module.exports = function(options) {
             "host": "stage2c6724.qa.paypal.com",
             "port": 22,
             "username": "prrathore",
-            "password":"Nod3IsFun!"
-            //"privateKey": "/home/root/.ssh/id_root"
+            //"password":"password!"
+            "privateKey": "/Users/prrathore/.ssh/id_rsa"
         }
     );
 
