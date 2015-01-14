@@ -8,7 +8,6 @@ var Sftp = require('sftp-upload'),
 var options = {
         host:'stage2c6724.qa.paypal.com',
         username:'prrathore',
-        //password:'Nod3IsFun!',
         path: '/Users/prrathore/temp',
         remoteDir: '/x/home/prrathore/temp', //uploaded files to /x/home/prrathore/x/home/prrathore/temp dir
         privateKey: fs.readFileSync('/Users/prrathore/.ssh/id_rsa')
