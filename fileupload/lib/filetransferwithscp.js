@@ -5,8 +5,6 @@
 var client = require('scp2');
 var fs = require('fs');
 
-//client = new Client();
-
 client.defaults({
     port: 22,
     host: 'stage2c6724.qa.paypal.com',
@@ -17,7 +15,7 @@ client.defaults({
 client.upload('/Users/prrathore/temp/DEVELOPMENT-application.properties', '/x/home/prrathore/temp/application-dev-scp.txt', function(err) {
 
     if(err) {
-        console.log("File uoload failed: " + err);
+        console.log("File upload failed: " + err);
         client.close();
     }
 
