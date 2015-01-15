@@ -44,7 +44,7 @@ function calculateArea(options) {
         this.emit('notobject');
     }
 
-    if(options.length === undefined || options.length === undefined) {
+    if(options.length === undefined || options.breadth === undefined) {
         this.emit('invalidparams');
     }
 
