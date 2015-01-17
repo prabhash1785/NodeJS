@@ -16,22 +16,22 @@ function calculateArea(options) {
 
     EventEmitter.call(self);
 
-    this.on('undefined', function() {
+    self.on('undefined', function() {
         console.log("not an object");
         throw "not an object";
     })
 
-    this.on('notobject', function() {
+    self.on('notobject', function() {
         console.log("undefined object");
         throw "undefined options object";
     })
 
-    this.on('invalidparams', function() {
+    self.on('invalidparams', function() {
         console.log("invalid params");
         throw "Invalid parameters!!";
     })
 
-    this.on('area', function() {
+    self.on('area', function() {
         console.log("Area calculated: " + area);
         return area;
     })
@@ -51,7 +51,7 @@ function calculateArea(options) {
 
 
     var area = options.length * options.breadth;
-    this.emit('area');
+    self.emit('area');
 
 }
 
