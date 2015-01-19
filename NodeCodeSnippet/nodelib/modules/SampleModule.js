@@ -48,12 +48,15 @@ function calculateArea(options) {
         this.emit('invalidparams');
     }
 
-    var area = options.length * options.breadth;
-    self.emit('area');
+    this.area = function() {
+        var area = options.length * options.breadth;
+        self.emit('area', area);
+    }
 
 }
 
 util.inherits(calculateArea, EventEmitter);
 
-//var area = new calculateArea({lengths : 5, breadth : 10});
+//var area = new calculateArea({length : 5, breadth : 10});
+//area.area();
 module.exports = calculateArea;

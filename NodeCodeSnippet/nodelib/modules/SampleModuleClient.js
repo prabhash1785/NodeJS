@@ -6,7 +6,7 @@
 
 var SampleModule = require('./SampleModule');
 
-sampleModule = new SampleModule({length : 50, breadths : 100});
+sampleModule = new SampleModule({lengths : 50, breadths : 100});
 
 sampleModule.on('undefined', function() {
     console.log("not an object");
@@ -23,9 +23,11 @@ sampleModule.on('invalidparams', function() {
     throw "Invalid parameters!!";
 })
 
-sampleModule.on('area', function() {
+sampleModule.on('area', function(area) {
     console.log("Area calculated: " + area);
     return 'area';
 })
+
+sampleModule.area();
 
 
