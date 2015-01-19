@@ -16,25 +16,25 @@ function calculateArea(options) {
 
     EventEmitter.call(self);
 
-    self.on('undefined', function() {
-        console.log("not an object");
-        throw "not an object";
-    })
-
-    self.on('notobject', function() {
-        console.log("undefined object");
-        throw "undefined options object";
-    })
-
-    self.on('invalidparams', function() {
-        console.log("invalid params");
-        throw "Invalid parameters!!";
-    })
-
-    self.on('area', function() {
-        console.log("Area calculated: " + area);
-        return area;
-    })
+//    self.on('undefined', function() {
+//        console.log("not an object");
+//        throw "not an object";
+//    })
+//
+//    self.on('notobject', function() {
+//        console.log("undefined object");
+//        throw "undefined options object";
+//    })
+//
+//    self.on('invalidparams', function() {
+//        console.log("invalid params");
+//        throw "Invalid parameters!!";
+//    })
+//
+//    self.on('area', function() {
+//        console.log("Area calculated: " + area);
+//        return area;
+//    })
 
     if(options === undefined) {
        this.emit('undefined');
@@ -48,8 +48,6 @@ function calculateArea(options) {
         this.emit('invalidparams');
     }
 
-
-
     var area = options.length * options.breadth;
     self.emit('area');
 
@@ -57,6 +55,5 @@ function calculateArea(options) {
 
 util.inherits(calculateArea, EventEmitter);
 
-var area = new calculateArea({lengths : 5, breadth : 10});
-
+//var area = new calculateArea({lengths : 5, breadth : 10});
 module.exports = calculateArea;
