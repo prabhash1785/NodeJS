@@ -31,21 +31,21 @@ function calculateArea(options) {
 //        throw "Invalid parameters!!";
 //    })
 //
-//    self.on('area', function() {
+//    self.on('area', function(area) {
 //        console.log("Area calculated: " + area);
 //        return area;
 //    })
 
     if(options === undefined) {
-       this.emit('undefined');
+        self.emit('undefined');
     }
 
     if(typeof options !== 'object') {
-        this.emit('notobject');
+        self.emit('notobject');
     }
 
     if(options.length === undefined || options.breadth === undefined) {
-        this.emit('invalidparams');
+        self.emit('invalidparams');
     }
 
     this.area = function() {
