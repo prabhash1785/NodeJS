@@ -7,6 +7,17 @@
 var fs = require('fs');
 var path = require('path');
 
-fs.mkdir(__dirname + path.sep + 'temp', function() {
+var dirName = __dirname + path.sep + 'temp';
+
+fs.mkdir(dirName, function() {
     console.log("Directory is created!!");
+})
+
+var fileName = dirName + path.sep + 'test.txt';
+
+fs.writeFile(fileName, 'Playing with Node FS APIs', {encoding: 'utf8', mode: 438, flag: 'w'}, function(err) {
+    if(err) {
+        throw err;
+    }
+    console.log("File is created!!");
 })
