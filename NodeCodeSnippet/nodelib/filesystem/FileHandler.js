@@ -4,6 +4,8 @@
  * Created by prrathore on 1/20/15.
  */
 
+'use strict';
+
 var fs = require('fs');
 var path = require('path');
 
@@ -23,3 +25,12 @@ fs.writeFile(fileName, 'Playing with Node FS APIs', {encoding: 'utf8', mode: 438
     }
     console.log("File is created!!");
 });
+
+fs.unlink(__dirname + path.sep + 'temp/deleteme.txt', function(err) {
+
+    if(err) {
+        console.log("Error occurred while deleting the file: " + err);
+        throw err;
+    }
+    console.log("deleteme file is deleted");
+})
