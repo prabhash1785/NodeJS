@@ -26,11 +26,24 @@ fs.writeFile(fileName, 'Playing with Node FS APIs', {encoding: 'utf8', mode: 438
     console.log("File is created!!");
 });
 
-fs.unlink(__dirname + path.sep + 'temp/deleteme.txt', function(err) {
+var fileToBeDeleted = __dirname + path.sep + 'temp/deleteme.txt';
 
-    if(err) {
-        console.log("Error occurred while deleting the file: " + err);
-        throw err;
+fs.exists(fileToBeDeleted, function(exists) {
+
+    if(exists) {
+        console.log("File exists, going to delete it now");
+        fs.unlink(__dirname + path.sep + 'temp/deleteme.txt', function(err) {
+
+            if(err) {
+                console.log("Error occurred while deleting the file: " + err);
+                throw err;
+            }
+            console.log("deleteme file is deleted");
+        });
+
+    } else {
+        console.log("File doesn't exist!!");
     }
-    console.log("deleteme file is deleted");
-})
+
+
+});
