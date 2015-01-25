@@ -2,6 +2,9 @@
   "name": "NodeCodeSnippet",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "test": "grunt lint"
+  },
   "dependencies": {
     "async": "^0.9.0",
     "commander": "^2.6.0",
