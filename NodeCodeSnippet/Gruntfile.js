@@ -35,4 +35,8 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.registerTask('default', 'My "default" task description.', function() {
+        grunt.log.writeln('Currently running the "default" task.');
+    });
+
 };
