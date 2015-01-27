@@ -40,6 +40,15 @@
             }
         },
 
+
+        "multer": {
+            "enabled": true,
+            "priority": 110,
+            "module": {
+                "name": "path:./lib/multer"
+            }
+        },
+
         "router": {
             "module": {
                 "arguments": [{ "directory": "path:./controllers" }]
@@ -79,14 +88,6 @@
             "priority": 150,
             "module": {
                 "name": "kraken-js/middleware/multipart"
-            }
-        },
-
-        "multer": {
-            "enabled": true,
-            "priority": 160,
-            "module": {
-                "name": "path:./lib/multer"
             }
         },
 
