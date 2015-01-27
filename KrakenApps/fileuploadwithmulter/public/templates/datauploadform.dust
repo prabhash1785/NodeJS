@@ -1,0 +1,25 @@
+{>"layouts/master" /}
+
+{<body}
+
+        <form method="post" action="uploadwithmulter" enctype="multipart/form-data">
+
+            <input type="hidden" name="execution" value="{data.flowExecutionKey}" />
+            <input type="hidden" name="_csrf" value="{_csrf}" />
+
+
+            <div class="content">Upload File: </t>
+                <input type="file" name="file"/>
+            </div>
+
+            <br>
+
+            <div>
+                <button type="submit" name="submitdata">Submit</button>
+            </div>
+
+        </form>
+
+        <div class="content">{.status}</div>
+
+{/body}
