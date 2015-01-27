@@ -4,13 +4,11 @@
 
 var multer = require('multer');
 
-module.exports = function(options) {
-
-    options = options || {};
+module.exports = function() {
 
     return function(req, res, next) {
 
-        options = {
+        return multer({
             dest: '/Users/prrathore/temp/cardfileuploads',
             limits: {
                 fieldNameSize: 500,
@@ -47,10 +45,14 @@ module.exports = function(options) {
             onPartsLimit: function () {
                 console.log('Crossed parts limit!')
             },
-            onError: function(error, next) {
+            onError: function (error, next) {
                 console.log("Error occurred while uploading the file!!");
             }
-        };
+
+        });
+
+    next();
 
     }
+
 }

@@ -15,7 +15,7 @@ module.exports = function (router) {
         
     });
 
-    router.get('/uploadwithmulter', function (req, res) {
+    router.post('/uploadwithmulter', function (req, res) {
 
         model.status = "File Uploaded!!";
 

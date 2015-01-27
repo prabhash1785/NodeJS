@@ -86,7 +86,19 @@
             "enabled": true,
             "priority": 160,
             "module": {
-                "name": "../lib/multer"
+                "name": "path:./lib/multer"
+            }
+        },
+
+        "appsec": {
+            "module": {
+                "arguments": [
+                    {
+                        "xframe": "SAMEORIGIN",
+                        "p3p": false,
+                        "csp": false
+                    }
+                ]
             }
         }
 
