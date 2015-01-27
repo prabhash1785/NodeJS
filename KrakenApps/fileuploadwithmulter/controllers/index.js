@@ -17,6 +17,7 @@ module.exports = function (router) {
 
     router.post('/uploadwithmulter', function (req, res) {
 
+        console.log("In router.post middleware: Going to update file upload status!!");
         model.status = "File Uploaded!!";
 
         res.render('datauploadform', model);

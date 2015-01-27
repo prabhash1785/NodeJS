@@ -7,7 +7,7 @@ var multer = require('multer');
 module.exports = function() {
 
     return multer({
-        dest: '/Users/pvenkatakrishnan/temp/cardfileuploads',
+        dest: '/Users/prrathore/temp/cardfileuploads',
         limits: {
             fieldNameSize: 500,
             files: 2,
@@ -25,9 +25,10 @@ module.exports = function() {
         onParseStart: function () {
             console.log('Form parsing started at: ', new Date())
         },
-        /*onParseEnd: function (req, next) {
+        onParseEnd: function (req, next) {
             console.log('Form parsing completed at: ', new Date());
-        }, // commenting this out coz we want to be called in the middleware next */
+            next(); //call the next middleware
+        }, // commenting this out coz we want to be called in the middleware next
         onFileUploadComplete: function (file) {
             console.log(file.fieldname + ' uploaded to  ' + file.path);
         },
