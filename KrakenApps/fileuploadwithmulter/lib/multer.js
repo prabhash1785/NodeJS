@@ -27,8 +27,8 @@ module.exports = function() {
         },
         onParseEnd: function (req, next) {
             console.log('Form parsing completed at: ', new Date());
-            next(); //call the next middleware
-        }, // commenting this out coz we want to be called in the middleware next
+            next(); //call the next middleware, if next() is not called then request will hang and no response will be returned
+        },
         onFileUploadComplete: function (file) {
             console.log(file.fieldname + ' uploaded to  ' + file.path);
         },
