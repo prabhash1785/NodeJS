@@ -21,6 +21,7 @@ console.log("Value of c: " + JSON.stringify(c));
 
 var d = Object.create(Person.prototype);
 console.log("Value of d: " + d);
+console.log("Stringified Value of d: " + JSON.stringify(d));
 
 console.log("Prototype of Person: " + JSON.stringify(Person.prototype));
 
