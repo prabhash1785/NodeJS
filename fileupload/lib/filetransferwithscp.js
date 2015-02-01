@@ -7,9 +7,9 @@ var fs = require('fs');
 
 client.defaults({
     port: 22,
-    host: 'stage2c6724.qa.paypal.com',
-    username: 'prrathore',
-    privateKey: fs.readFileSync('/Users/prrathore/.ssh/id_rsa')
+    host: 'hostname',
+    username: 'username',
+    privateKey: fs.readFileSync('privateKeyPath')
 });
 
 client.upload('/Users/prrathore/temp/DEVELOPMENT-application.properties', '/x/home/prrathore/temp/application-dev-scp.txt', function(err) {
