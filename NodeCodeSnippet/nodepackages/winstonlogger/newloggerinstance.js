@@ -19,5 +19,8 @@ var logger = new winston.Logger({
     }
 );
 
+logger.log('info', 'sending info level log using my custom logger');
+logger.log('error', 'sending error level log using my custom logger');
+
 logger.info("foo");
 logger.error("bar");
