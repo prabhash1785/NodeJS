@@ -10,9 +10,10 @@ winston
     .remove(winston.transports.Console)
     .add(winston.transports.Console, {
         level: "error",
+        level: "info",
         colorize: true,
         timestamp: true
     });
 
-winston.info("test info"); //won't output because my custom transport doesn't have info log level
+winston.info("test info");
 winston.error("test error");
