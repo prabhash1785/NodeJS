@@ -17,9 +17,14 @@ describe('Array Test', function() {
            [1,2,3].indexOf(5).should.equal(-1);
            [1,2,3].indexOf(0).should.equal(-1);
 
+       });
+
+       it('should return -1 when the value is not present', function() {
+
            //assertion using Node assert core module
-//           assert.equal(-1, [1,2,3].indexOf(5));
-//           assert.equal(-1, [1,2,3].indexOf(0));
+           assert.equal(-1, [1,2,3].indexOf(10));
+           assert.equal(-1, [1,2,3].indexOf(7));
+
        });
    });
 });
