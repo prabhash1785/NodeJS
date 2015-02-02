@@ -21,7 +21,8 @@ http.createServer(function(request, response) {
 }).listen(8002);
 
 //Reverse Proxy server to load balance between two http servers
-var proxyServer = require("http-proxy");
+//TODO: fix proxy server issue
+var httpProxy = require("http-proxy");
 var servers = [
     {
         host: "localhost",
@@ -40,3 +41,5 @@ proxyServer.createServer(function (req, res, proxy) {
     proxy.proxyRequest(req, res, target);
     servers.push(target);
 }).listen(8000);
+
+//httpProxy.createProxyServer({target:'http://localhost:8001'}).listen(8000);
