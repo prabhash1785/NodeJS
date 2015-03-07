@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Add User</title>
+    <link rel="stylesheet" type="text/css" href="application.css"/>
+    <style>
+        h1 {
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="addUserForm">
+
+    <h1>Edit a User</h1>
+
+    <form method="POST" action="/user/update">
+        <input type="hidden" id="id" name="id" value=""/>
+
+        <div class="formRow">
+            <label for="email">Email Address</label>
+            <input type="text" id="email" name="email"/>
+        </div>
+        <div class="formRow">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"/>
+        </div>
+        <div class="formRow">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname"/>
+        </div>
+        <div class="formRow">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname"/>
+        </div>
+        <div class="formRow">
+            <label for="telephone">Telephone</label>
+            <input type="text" id="telephone" name="telephone"/>
+        </div>
+        <fieldset>
+            <legend>Address</legend>
+            <div class="formRow">
+                <label for="street1">Street</label>
+                <input type="text" id="street1" name="street1"/>
+            </div>
+            <div class="formRow">
+                <label for="street2">Street</label>
+                <input type="text" id="street2" name="street2"/>
+            </div>
+            <div class="formRow">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city"/>
+            </div>
+            <div class="formRow">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state"/>
+            </div>
+            <div class="formRow">
+                <label for="zip">Zip Code</label>
+                <input type="text" id="zip" name="zip"/>
+            </div>
+
+        </fieldset>
+
+        <div class="formTextarea">
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment"></textarea>
+        </div>
+
+        <div class="buttonRow">
+            <button type="submit" id="submitButton">Save</button>
+            <button type="cancel" onclick="cancelUserData(); return false;">Cancel</button>
+        </div>
+    </form>
+
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="application.js"></script>
+<script>
+    /**
+     * From a js object, get the name / value pairs and
+     * set the value on the screen in the form.
+     *
+     * @param formname
+     * @param values
+     */
+    function setInputs(formname, values) {
+        var inputs = $(formname + " :input");
+        var fornVariables = {};
+        $.map(inputs, function (n, i) {
+            fornVariables[n.name] = $(n);
+        });
+        for (key in values) {
+            if (fornVariables[key]) {
+                fornVariables[key].val(values[key])
+            }
+        }
+    }
+
+    function updateUserData(formname) {
+        var inputs = getInputs(formname);
+        console.log("inputs = " + inputs);
+        $.post('/api/users/' + inputs.id, inputs, function(results) {
+            window.location.href = "listUsers.html";
+        }, 'json');
+        return false;
+    }
+
+    function getInputs(formname) {
+        var inputs = $(formname + " :input");
+        var data = {};
+        var obj = $.map(inputs, function(n, i)
+        {
+            data[n.name] = $(n).val();
+        });
+        return data;
+    }
+
+
+
+    $.getJSON('/api/currentUser', function (result) {
+        // returns an object with name/value pairs
+        setInputs('form', result);
+    });
+
+    $('#submitButton').click(function(event) {
+        event.preventDefault();
+        updateUserData('form');
+
+    });
+
+    function cancelUserData() {
+        window.location.href = 'listUsers.html';
+    }
+
+</script>
+
+</body>
+</html>

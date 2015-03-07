@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Add User</title>
+    <link rel="stylesheet" type="text/css" href="application.css"/>
+    <style>
+    </style>
+</head>
+<body>
+
+<h1>All User</h1>
+
+<p>
+    Below is a list of all users in the system
+</p>
+
+<div id="results">
+
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="application.js"></script>
+<script>
+
+    function createTable(headers, properties, data) {
+        var table = $('<table><thead></thead><tbody></tbody></table>');
+
+        var tr = $('<tr />');
+        $.each(headers, function (index, value) {
+            var th = $('<th />').append(value);
+            tr.append(th);
+        });
+        table.find('thead').append(tr);
+
+        $.each(data, function (index, user) {
+            tr = $('<tr />');
+            $.each(properties, function (index, key) {
+                var td = $('<td />').append(user[key]);
+                if (key == 'id') {
+                    var a = $('<a href="#" />');
+                    a.attr('userId', user[key]).append(user[key]);
+                    td.html(a);
+                }
+                tr.append(td);
+            });
+            table.find('tbody').append(tr);
+        });
+        return table;
+    }
+
+    function setLinkClicks() {
+        $("table a").click(function (event) {
+            event.preventDefault();
+            var id = $(this).attr('userId');
+            var url = '/api/currentUser';
+            $.getJSON(url, {userId: id}, function (result) {
+                console.log(result);
+                window.location.assign('edit.html');
+            });
+        });
+    }
+
+    $.getJSON('/api/users', function (result) {
+        // returns an object with name/value pairs
+        var properties = ['id', 'firstname', 'lastname', 'state'];
+        var headers = ['ID', 'First Name', 'Last Name', 'State'];
+        var table = createTable(headers, properties, result);
+        $('#results').html(table);
+        setLinkClicks();
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Fun with Forms</title>
+    <style>
+        label {
+            width: 200px;
+            display: inline-block;
+            margin: 20px 0px 0px 0px;
+            text-align: right;
+        }
+        body {
+            background-color: lightgreen;
+        }
+        form {
+            background-color: yellowgreen;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Create User</h1>
+
+<div class="addUserForm">
+
+    <h1>Edit a User</h1>
+
+    <form>
+        <div class="formRow">
+            <label for="email">Email Address</label>
+            <input type="text" id="email" name="email" required/>
+        </div>
+        <div class="formRow">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required/>
+        </div>
+        <div class="formRow">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname"/>
+        </div>
+        <div class="formRow">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname"/>
+        </div>
+        <div class="formRow">
+            <label for="title">Title</label>
+            Mr<input type="radio" id="title" name="title" value="Mr"/>
+            Mrs<input type="radio" id="title2" name="title" value="Mrs"/>
+            Miss<input type="radio" id="title3" name="title" value="Miss"/>
+            Dr<input type="radio" id="title4" name="title" value="Dr"/>
+        </div>
+        <div class="formRow">
+            <label for="telephone">Telephone</label>
+            <input type="text" id="telephone" name="telephone"/>
+        </div>
+        <fieldset>
+            <legend>Telephone</legend>
+            <div class="formRow">
+                <label for="countryCode">Country Code</label>
+                <input type="number" id="countryCode" name="countryCode"/>
+            </div>
+            <div class="formRow">
+                <label for="areacode">Area Code</label>
+                <input type="number" id="areacode" name="areacode"/>
+            </div>
+            <div class="formRow">
+                <label for="number">Number</label>
+                <input type="number" id="number" name="number"/>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Address</legend>
+            <div class="formRow">
+                <label for="street1">Street</label>
+                <input type="text" id="street1" name="street1"/>
+            </div>
+            <div class="formRow">
+                <label for="street2">Street</label>
+                <input type="text" id="street2" name="street2"/>
+            </div>
+            <div class="formRow">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city"/>
+            </div>
+            <div class="formRow">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state"/>
+            </div>
+            <div class="formRow">
+                <label for="zip">Zip Code</label>
+                <input type="text" id="zip" name="zip"/>
+            </div>
+
+        </fieldset>
+
+        <div class="formTextarea">
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment"></textarea>
+        </div>
+
+        <div class="buttonRow">
+            <button type="submit">Save</button>
+            <button type="cancel">Cancel</button>
+        </div>
+    </form>
+
+</div>
+
+
+</body>
+</html>

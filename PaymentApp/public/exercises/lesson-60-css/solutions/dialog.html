@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CSS Exercises</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+    <!-- enter style information below -->
+    <style>
+        html, body {
+        }
+        header {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            z-index: 10;
+        }
+
+        nav {
+            padding-top: 100px;
+        }
+
+        .dialogBackground {
+            display: none;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background-color: black;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+        }
+
+        .dialog {
+            font-family: "Helvetica Neue", Helvetica, sans-serif;
+            display: none;
+            background-color: white;
+            position: absolute;
+            top: 200px;
+            left: 25%;
+            width: 300px;
+            z-index: 20;
+            border: 2px solid;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        .dialog label, .dialog input {
+            display: block;
+            padding: 5px;
+        }
+
+        .dialog input {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .dialogTitle {
+            font-size: 30px;
+            text-align: center;
+        }
+        .buttons {
+            height: 50px;
+            text-align: center;
+        }
+        .buttons button {
+            font-size: 15px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="/images/PP_TechnologyEdLogo.jpg" height="46" width="126">
+
+    <h1>Front End Bootcamp</h1>
+</header>
+<nav>
+    <a href="/">Home</a> |
+    <a href="/exercises">Exercises</a>
+    <a id="loginLink" href="#">Sign In</a>
+</nav>
+<div class="dialogBackground"></div>
+<div class="dialog">
+    <div class="dialogTitle">
+        Login
+    </div>
+    <div class="dialogBody">
+        <form>
+            <label for="username">Name:</label>
+            <input type="text" id="username"/> <br/>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password"/> <br/>
+
+            <div class="buttons">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div id="center">
+
+    This is the text content of the page.
+
+</div>
+
+<footer>
+    <h1>Thank you for attending</h1>
+</footer>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/application.js"></script>
+
+<script>
+    // enter javascript here
+    $('#loginLink').click(function (event) {
+        $('.dialogBackground').show();
+        $('.dialog').show();
+    });
+    $('.dialog button').click( function(event) {
+        $('.dialogBackground').hide();
+        $('.dialog').hide();
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Fun with Forms</title>
+    <style>
+        label {
+            width: 200px;
+            display: inline-block;
+            text-align: right;
+        }
+        div.formInput {
+            display: block;
+            margin: 10px 0px;
+        }
+    </style>
+</head>
+<body>
+<h1>Create User</h1>
+
+<form action="user/create" method="POST">
+
+    <div class="formInput">
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" required
+               placeholder="Enter email address"/>
+    </div>
+
+    <div class="formInput">
+        <label for="username">Username: </label>
+        <input type="text" id="username" name="username"
+               required placeholder="Enter user name"/>
+    </div>
+
+    <div class="formInput">
+        <label for="pattern">SSN: </label>
+        <input type="pattern" id="pattern" name="pattern" pattern="\d\d\d-\d\d-\d\d\d\d"
+               required placeholder="999-99-9999"/>
+    </div>
+
+    <div class="formInput">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required/>
+    </div>
+
+    <button type="submit" name="submit" value="Create">Create User</button>
+</form>
+
+</body>
+</html>

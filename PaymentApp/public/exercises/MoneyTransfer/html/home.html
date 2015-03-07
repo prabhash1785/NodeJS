@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Money Transfer App</title>
+    <link rel="stylesheet" type="text/css" href="/css/appstyles.css"/>
+</head>
+<body>
+<div id="frame">
+    <div id="header" class="header">
+        <h1 id="title">What are we doing?</h1>
+    </div>
+    <div id="middleframe" class="middleframe">
+        <div class="buttonRow">
+            <button id="sendMoney" class="buttons">Send Money</button>
+        </div>
+        <div class="buttonRow">
+            <button id="viewTransactions" class="buttons">View Transactions</button>
+        </div>
+    </div>
+    <div id="footer" class="header">
+
+    </div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+
+<script>
+    $('#sendMoney').click(function() {
+        window.location='sendMoney.html';
+    });
+    $('#viewTransactions').click(function() {
+        window.location='viewTransactions.html';
+    });
+</script>
+
+</body>
+</html>

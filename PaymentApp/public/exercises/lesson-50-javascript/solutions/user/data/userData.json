@@ -1,0 +1,8 @@
+{
+    "headers" : ["First Name", "Last Name", "State"],
+    "info" : [["Clay", "Boyd", "Texas"],
+        ["Matt", "Brandabur", "CA"],
+        ["Rolando", "Dimaandal", "CA"],
+        ["Pragati", "Raj", "India"]
+    ]
+}

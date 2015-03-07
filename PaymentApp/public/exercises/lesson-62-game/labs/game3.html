@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Training Exercises</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+    <!-- enter style information below -->
+    <style>
+
+        .center {
+            margin: 0 auto;
+        }
+
+        div.row {
+            clear:both;
+            width: 400px;
+            height: 100px;
+            padding: 0px;
+            border: 0px;
+            font-size: 0px;
+        }
+
+        div.tile {
+            float:left;
+        }
+
+        div.tile {
+            height: 80px;
+            width: 80px;
+            font-size: 40px;
+            border: solid 1px black;
+            border-top: solid 5px black;
+            border-left: solid 5px black;
+            margin: 2px;
+            padding: 5px;
+            background-color: #d3d3d3;
+        }
+
+        div.game {
+            margin: 0 auto;
+        }
+
+        div.tile:hover {
+            background-color: white;
+        }
+
+        div.empty {
+            background-color: #808080;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="/images/PP_TechnologyEdLogo.jpg" height="46" width="126">
+
+    <h1>Front End Bootcamp</h1>
+</header>
+<nav>
+    <a href="/">Home</a> |
+    <a href="/exercises">Exercises</a>
+</nav>
+
+<div id="center">
+
+    <h1>The Game</h1>
+
+    <div id="game" class="game center">
+
+        <div class="row center">
+            <div class="tile" data-row="0" data-col="0">1</div>
+            <div class="tile" data-row="0" data-col="1">2</div>
+            <div class="tile" data-row="0" data-col="2">3</div>
+            <div class="tile" data-row="0" data-col="3">4</div>
+        </div>
+
+        <div class="row center">
+            <div class="tile" data-row="1" data-col="0">5</div>
+            <div class="tile" data-row="1" data-col="1">6</div>
+            <div class="tile" data-row="1" data-col="2">7</div>
+            <div class="tile" data-row="1" data-col="3">8</div>
+        </div>
+
+        <div class="row center">
+            <div class="tile" data-row="2" data-col="0">9</div>
+            <div class="tile" data-row="2" data-col="1">10</div>
+            <div class="tile" data-row="2" data-col="2">11</div>
+            <div class="tile" data-row="2" data-col="3">12</div>
+        </div>
+
+        <div class="row center">
+            <div class="tile" data-row="3" data-col="0">13</div>
+            <div class="tile" data-row="3" data-col="1">14</div>
+            <div class="tile" data-row="3" data-col="2">15</div>
+            <div class="tile empty" data-row="3" data-col="3">&nbsp;</div>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <h1>Thank you for attending</h1>
+</footer>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/application.js"></script>
+
+<script>
+    // enter javascript here
+
+    $('.tile').click(function () {
+        var tile = $(this);
+        var empty = $('#game').find('.empty');
+    });
+
+</script>
+</body>
+</html>

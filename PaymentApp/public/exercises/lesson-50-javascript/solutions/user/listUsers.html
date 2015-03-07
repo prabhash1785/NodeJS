@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>List Users</title>
+    <link rel="stylesheet" type="text/css" href="application.css" />
+</head>
+<body>
+<h1>List Users</h1>
+
+<div id="userTable"></div>
+
+<script src="/js/jquery.min.js"></script>
+
+<script>
+    function createUserTable(selector, data ) {
+        var table = $('<table><thead></thead><tbody></tbody></table>');
+
+        var tr = $("<tr />");
+        $.each(data.headers, function(index, value) {
+            tr.append($("<th />").append(value));
+        });
+
+        tr.append($('<th>Edit</th>'));
+
+        table.find('thead').append(tr);
+
+        $.each(data.info, function(index, user) {
+            tr = $("<tr />");
+            $.each(data.properties, function(index, value) {
+                tr.append($("<td />").append(user[value]));
+            })
+            tr.append($('<a href="editUser.html" userId="' + user.id + '">Edit</a>'));
+
+            table.find('tbody').append(tr);
+        })
+
+        $(selector).empty().append(table);
+    }
+
+
+    function setUserId(id) {
+        $.getJSON('/api/currentUser?userId=' + id, function(result) {
+            window.location.href = "editUser.html";
+        });
+        return false;
+    }
+
+    $.getJSON('/api/users', function(result) {
+        var data = {
+            properties: ['firstname','lastname', 'state'],
+            headers: ['First Name', 'Last Name', 'State'],
+            info: result
+        };
+        createUserTable('#userTable', data);
+        $('#userTable a').click(function(event) {
+            event.preventDefault();
+            setUserId($(this).attr('userId'));
+        });
+    });
+</script>
+</body>
+</html>

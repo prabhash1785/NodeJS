@@ -1,0 +1,12 @@
+extends ../layouts/default
+
+block content
+  
+  #list
+    form(action='/create', method='post', accept-charset='utf-8')
+      .item-new
+        input(class='input', type='text', name='content')
+    - each user in users
+      .item
+        a(class='update-link', href='/edit/#{user.id}', title='Update this user item') #{user.content}
+        a(class='del-btn', href='/delete/#{user.id}', title='Delete this user item') Delete

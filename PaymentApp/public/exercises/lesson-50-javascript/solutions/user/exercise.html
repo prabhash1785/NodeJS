@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<title>Howdy</title>
+<link rel="stylesheet" type="text/css" href="application.css"/>
+<style>
+
+    .results {
+        color: red;
+    }
+
+    .highlight {
+        color: red;
+        background-color: yellow;
+    }
+
+    .paypalCity {
+        background-color: red;
+        color: white;
+    }
+
+    .ebayCity {
+        background-color: blue;
+        color: white;
+    }
+
+    table, thead tr th {
+        border: solid 1px black;
+        border-collapse: collapse;
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+
+    div.addUserForm {
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    .addUserForm fieldset {
+        margin: 20px 0;
+    }
+
+    .addUserForm .formRow label {
+        display: inline-block;
+        width: 25%;
+        text-align: right;
+    }
+
+    .addUserForm input {
+        width: 70%;
+    }
+
+    .addUserForm textarea {
+        width: 95%;
+        height: 5em;
+    }
+
+    .addUserForm .formRow {
+        margin: 5px 0;
+    }
+
+    .addUserForm fieldset {
+        width: 95%;
+    }
+
+</style>
+<body>
+<h1>Hello, World...</h1>
+<ul class="state">Texas
+    <li class="city paypal ebay">Austin</li>
+    <li class="city">Dallas</li>
+    <li class="city paypal">Houston</li>
+</ul>
+
+<ul class="state">California
+    <li class="city">Berkeley</li>
+    <li class="city paypal ebay">San Jose</li>
+    <li class="city ebay">Sacramento</li>
+</ul>
+
+<div id="status" class="hidden">Mouse Over</div>
+<div id="table"></div>
+<div id="table2"></div>
+
+<div id="results" class="results">
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="data/users.js"></script>
+<script src="data/usersArray.js"></script>
+<script src="data/userData.js"></script>
+<script>
+    $('title').text('Hello, world.');
+    var title = $('title').text();
+    $('#results').append(title);
+    $('#results').append($('h1').html());
+    var h1 = $('h1');
+    var h2 = $("<h1 />");
+    h1.after(h2);
+    h2.text("How y'all doin?");
+
+    // change color
+    $('h1').first().css('color', 'red');
+    $('h1').first().next().css('color', 'blue');
+
+    // highlight on click
+
+    $('h1').click(function () {
+        $(this).toggleClass('highlight');
+    });
+
+    // click on a state name
+    $('li.city').click(function () {
+        $(this).siblings().removeClass('highlight');
+        $(this).toggleClass('highlight');
+    })
+
+    // mouseover and out
+    $('ul.state').mouseover(function () {
+        $(this).find('li.paypal').addClass('paypalCity');
+        $(this).find('li.ebay').addClass('ebayCity');
+    });
+    $('ul.state').mouseout(function () {
+        $(this).find('li').removeClass('paypalCity').removeClass('ebayCity');
+    });
+
+    // extract each state name
+    $('ul.state').each(function () {
+        var state = $(this).clone();
+        state.find('li').empty();
+        $('#results').append(state.text());
+    });
+
+    function printResults(msg) {
+        $('#results').append(msg).append('<br />');
+    }
+
+    var cities = ['Odessa', 'Midland', 'El Paso'];
+
+    // add to texas
+    $('ul.state').each(function () {
+        var state = $(this).clone();
+        state.find('li').empty();
+        var name = state.text().trim();
+        if (name === 'Texas') {
+            state = $(this);
+            $.each(cities, function (index, value) {
+                var li = $('<li />').append(value);
+                state.append(li);
+            })
+        }
+    });
+
+    var states = {
+        'Texas': {
+            cities: ['No Trees', 'Monahans']
+        },
+        'California': {
+            cities: ['Sacramento', 'San Francisco']
+        }
+    };
+
+    $('ul.state').each(function () {
+        var state = $(this).clone();
+        state.find('li').empty();
+        var name = state.text().trim();
+        if (states[name] && states[name].cities) {
+            state = $(this);
+            var cities = states[name].cities;
+            $.each(cities, function (index, value) {
+                var li = $('<li />').append(value);
+                state.append(li);
+            })
+        }
+    });
+
+    var headers = ['First Name', 'Last Name', 'State'];
+
+    var table = $('<table><thead><tr /></thead></table>');
+    var tr = table.find('tr');
+    $.each(headers, function (index, value) {
+        tr.append($('<th />').append(value));
+    });
+    $('#table').append(table);
+
+    var tbody = $('#table table').append('<tbody />');
+
+    // add users from array of data
+    $.each(usersArray, function (index, user) {
+        var tr = $('<tr />');
+        $.each(user, function (index, value) {
+            tr.append($('<td />').append(value));
+        });
+        tbody.append(tr);
+    });
+
+
+    // table data from array of objects
+    var names = ['firstname', 'lastname', 'state'];
+
+    var tbody = $('#table table').append('<tbody />');
+
+    $.each(users, function (index, user) {
+        var tr = $('<tr />');
+        $.each(names, function (index, value) {
+            tr.append($('<td />').append(user[value]));
+        });
+        tbody.append(tr);
+    });
+
+    $.getJSON('data/userData.json', function (result) {
+        createTable('#table', result);
+    });
+
+</script>
+</body>
+</html>

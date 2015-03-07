@@ -1,0 +1,50 @@
+
+.results {
+	color:red;
+}
+
+.highlight {
+	color: red;
+	background-color: yellow;
+}
+.paypalCity {
+	background-color: red;
+	color: white;
+}
+.ebayCity {
+	background-color: blue;
+	color: white;
+}
+table, thead tr th{
+	border: solid 1px black;
+	border-collapse: collapse;
+}
+.hidden {
+	visibility: hidden;
+}
+
+div.addUserForm {
+	width: 400px;
+	margin: 0 auto;
+}
+.addUserForm fieldset {
+	margin: 20px 0;
+}
+.addUserForm .formRow label {
+	display: inline-block;
+	width: 25%;
+	text-align: right;
+}
+.addUserForm input {
+	width: 70%;
+}
+.addUserForm textarea {
+	width: 95%;
+	height: 5em;
+}
+.addUserForm .formRow {
+	margin: 5px 0;
+}
+.addUserForm fieldset {
+	width: 95%;
+}

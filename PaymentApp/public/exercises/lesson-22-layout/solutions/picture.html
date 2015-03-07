@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>HTML5 Layout</title>
+    <style>
+        header, nav, section, article, footer {
+            border: solid 1px black;
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px;
+        }
+
+        section, article {
+            display: block;
+            height: 78px;
+        }
+        div.body {
+            width: 500px;
+            margin: 0 auto;
+            margin-top: 50px;
+            border: solid 1px black;
+        }
+
+        div.middle {
+            width: 100%;
+            height: 200px;
+        }
+
+        div.leftContainer {
+            width: 70%;
+            height: 200px;
+            display: inline-block;
+        }
+
+        aside {
+            display: inline-block;
+            width: 24%;
+            height: 178px;
+            text-align: center;
+            vertical-align: top;
+            margin: 0;
+            padding: 10px;;
+        }
+
+        footer {
+        }
+
+        div {
+            xxborder: solid 1px red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="body">
+    <header>&lt;header&gt;</header>
+    <nav>&lt;nav&gt;</nav>
+
+    <div class="middle">
+        <div class="leftContainer">
+            <section>&lt;section&gt;</section>
+            <article>&lt;article&gt;</article>
+        </div>
+        <aside>&lt;aside&gt;</aside>
+    </div>
+
+    <footer>&lt;footer&gt;</footer>
+
+</div>
+
+
+</body>
+</html>

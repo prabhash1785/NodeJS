@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Fun with Forms</title>
+</head>
+<body>
+    <h1>Create User</h1>
+    <form action="user/create" method="POST">
+        <label for="sex">Gender:</label>
+        <select name="sex" id="sex">
+            <option value="">Enter your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select> <br />
+        <label for="username">Name:</label>
+        <input type="text" id="username" /> <br />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"/> <br />
+
+        <label for="password2">Re-enter Password:</label>
+        <input type="password" id="password2" name="password2"/> <br />
+
+        <button type="submit">Create User</button>
+    </form>
+
+</body>
+</html>

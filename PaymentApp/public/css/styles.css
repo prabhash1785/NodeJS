@@ -1,0 +1,45 @@
+
+body {
+    background-color: white;
+    padding: 0px;
+    margin: 0px;
+}
+header {
+    background-color: white;
+    color: dodgerblue;
+}
+header img {
+    margin: 20px 10px;
+}
+header h1 {
+    vertical-align: top;
+    text-align: center;
+    display: inline-block;
+    margin: 25px auto;
+    font-size: 2em;
+    color: dodgerblue;
+}
+nav {
+    background-color: aliceblue;
+    color: white;
+    padding: 15px;
+}
+
+footer {
+    background-color: white;
+    color: dodgerblue;
+    padding: 25px;
+    border-bottom: solid 1px dodgerblue;
+    xxborder-top: solid 1px dodgerblue;
+}
+footer h1 {
+    text-align: center;
+    font-size: 2em;
+    color: dodgerblue;
+}
+#center {
+    background-color: darksalmon;
+    padding: 25px;
+    width: 500px;
+    margin: 25px auto;
+}

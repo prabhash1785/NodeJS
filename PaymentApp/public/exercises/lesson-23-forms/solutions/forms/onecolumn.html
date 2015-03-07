@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Fun with Forms</title>
+    <style>
+        label {
+            width: 200px;
+            display: block;
+            margin: 20px 0px 0px 0px;
+        }
+    </style>
+</head>
+<body>
+<h1>Create User</h1>
+
+<form action="user/create" method="POST">
+
+    <div class="formInput">
+        <label for="sex">Entery your gender: </label>
+        <select id="sex" name="sex">
+            <option value="">Enter your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+    </div>
+
+    <div class="formInput">
+        <label for="attrs" >Enter multiple attributes: </label>
+        <select id="attrs" name="attrs" multiple>
+            <option value="height">Height</option>
+            <option value="weight">Weight</option>
+            <option value="gender">Gender</option>
+            <option value="handedness">Left or Right Handed?</option>
+        </select>
+    </div>
+
+    <div class="formInput">
+        <label for="username">User Name:</label>
+        <input type="text" id="username" name="username"/>
+    </div>
+
+    <div class="formInput">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"/>
+    </div>
+
+    <div class="formInput">
+        <label for="sexy">Select your gender:</label>
+        Male: <input type="radio" id="sexy" name="sex2" value="Male"/>
+        Female: <input type="radio" id="sexy2" name="sex2" value="Female"/>
+    </div>
+
+    <div class="formInput">
+        <label for="sexyBox">Select your gender:</label>
+        Male: <input type="checkbox" id="sexyBox" name="sex3" value="Male"/>
+        Female: <input type="checkbox" id="sexy2Box" name="sex3" value="Female"/>
+    </div>
+
+    <div class="formInput">
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment"></textarea>
+    </div>
+
+    <button type="submit" name="submit" value="Create">Create User</button>
+</form>
+
+</body>
+</html>

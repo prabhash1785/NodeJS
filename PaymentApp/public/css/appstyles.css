@@ -1,0 +1,116 @@
+div#frame {
+    margin-left: 300px;
+}
+.header {
+    background-color: brown;
+    padding: 20px 40px;
+    border: 2px solid black;
+    width: 40%
+
+}
+h1#title {
+    padding: 20px 40px;
+    align-content: center;
+    font-weight: bold;
+    color: white;
+    margin-left: 85px;
+}
+.middleframe {
+    background-color: bisque;
+    padding: 80px 40px;
+    border: 2px solid black;
+    width: 40%;
+}
+#footer {
+    background-color: brown;
+    padding: 20px 40px;
+    border: 2px solid black;
+    width: 40%
+
+}
+.buttonRow {
+    margin: 30px 100px;
+}
+.buttons {
+    margin: 10px 10px;
+    padding: 30px 20px;
+    background-color: darkgray;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 100%;
+    background: linear-gradient(to bottom right, lightgrey, darkgrey);
+}
+.footerButtonRow {
+    display: inline-block;
+    margin: auto 50px;
+}
+.formRow {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    vertical-align: middle;
+    margin: 15px;
+}
+.formCol {
+    display: inline-block;
+    vertical-align: middle;
+}
+img {
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    float: right;
+}
+.dataInput1 {
+    width: 10%;
+}
+.dataInput2 {
+    width: 70%;
+}
+.dataInput3 {
+    width: 10%;
+}
+.right {
+    float: right;
+}
+.message {
+    border: none;
+    margin-top: 5px;
+}
+.noBorderRow {
+    border: none;
+    margin: 10px;
+    padding: 5px;
+}
+div.dialogBackground {
+    background-color: black;
+    opacity: 0.5;
+    z-index: 10;
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    display: none;
+    top: 300px;
+    left: 0px;
+    vertical-align: middle;
+    margin-left: 290px;
+}
+div.spinner {
+    opacity: 0;
+    z-index: 20;
+    position: absolute;
+    width: 35%;
+    height: 75%;
+    display: none;
+    top: 300px;
+    left: 0px;
+    vertical-align: middle;
+    margin-left: 50px;
+    padding: 180px;
+    float: left;
+}
+.spinnerImg {
+    width: 250px;
+    height: 250px;
+}
+

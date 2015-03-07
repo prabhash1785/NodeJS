@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Trouble with Tables</title>
+    <style>
+        table {
+            border: solid 1px black;
+            border-collapse: collapse;
+        }
+        tr.odd {
+            background-color: #cccccc;
+            border-top: solid 1px black;
+            border-bottom: solid 1px black;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+
+    <table>
+        <caption>User Table</caption>
+        <thead>
+        <tr>
+            <th colspan="2">Full Name</th>
+            <th></th>
+        </tr>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>State</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="odd">
+            <td>Clay</td>
+            <td>Boyd</td>
+            <td>Texas</td>
+        </tr>
+        <tr class="even">
+            <td>Ruth</td>
+            <td>Boyd</td>
+            <td>Texas</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

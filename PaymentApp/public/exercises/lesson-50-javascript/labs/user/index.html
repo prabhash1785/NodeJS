@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<title>Howdy</title>
+	<link rel="stylesheet" type="text/css" href="application.css" />
+
+    <style>
+        .highlight {
+            background-color: yellow;
+            color: red;
+        }
+        .eBayCity {
+            background-color: blue;
+        }
+        .paypalCity {
+            background-color: red;
+        }
+        .table {
+            border: 1px;
+            padding: 2px;
+        }
+    </style>
+
+<body>
+<h1>Hello, World...</h1>
+<ul class="state" id="Texas" name="Texas">Texas
+	<li class="city paypal ebay">Austin</li>
+	<li class="city">Dallas</li>
+	<li class="city paypal">Houston</li>
+</ul>
+
+<ul class="state" id="California"  name="California">California
+	<li class="city">Berkeley</li>
+	<li class="city paypal ebay">San Jose</li>
+	<li class="city ebay">Sacramento</li>
+</ul>
+
+<div id="results" class="results">
+</div>
+
+<div id="table"></div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="data/userData.js"></script>
+<script src="data/users.js"></script>
+
+<script>
+    $('title').text('Hello World');
+
+    var titleValue = $('title').text();
+    $('#results').append(titleValue);
+    $('#results').append($('h1').text());
+
+    //create a new h1 tag with a new value
+    $('h1').after('<h1>How y’all doin?</h1>');
+
+    $('h1').first().css('color', 'blue');
+    $('h1').last().css('color', 'orange');
+
+    $('h1').click(function(event) {
+       event.preventDefault();
+       $(this).toggleClass("highlight"); //toggle class toggles the css style class
+    });
+
+    //highlight city names on click
+    $('li').click(function(event) {
+       $(this).siblings().removeClass('highlight');
+        $(this).addClass('highlight');
+    });
+
+    $('ul.state').mouseenter(function(event) {
+       $(this).find('li.paypal').addClass('paypalCity');
+       $(this).find('li.ebay').addClass('eBayCity');
+    });
+
+    $('.state').mouseleave(function(event) {
+       $(this).find('li.ebay').removeClass('eBayCity');
+        $(this).find('li.paypal').removeClass('paypalCity');
+
+    });
+
+    $('ul.state').each(function() {
+        var state = $(this).clone();
+        state.find('li').empty();
+        $('#results').append(state.text());
+    });
+
+    (function printResults(msg) {
+        $('#results').append(msg).append('<br>').append('Test');
+    })('Prabhash');
+
+    var cities = ['Odessa', 'Midland', 'El Paso'];
+
+    $('#Texas').each(function() {
+       var state = $(this);
+        $.each(cities, function(index, value) {
+            var li = $('<li />').append(value);
+            state.append(li);
+        })
+    });
+
+    var states = {
+        'Texas': {
+            cities: ['No Trees', 'Monahans']
+        },
+        'California': {
+            cities: ['Sacramento', 'San Francisco']
+        }
+    };
+
+//    $('#Texas').each(function() {
+//        var state = $(this);
+//        $.each(states.Texas.cities, function(index, value) {
+//            var li = $('<li />').append(value);
+//            state.append(li);
+//        })
+//    });
+//
+//    $('#California').each(function() {
+//        var state = $(this);
+//        $.each(states.California.cities, function(index, value) {
+//            var li = $('<li />').append(value);
+//            state.append(li);
+//        })
+//    });
+
+    $('ul.state').each(function() {
+       var state = $(this);
+        var name = state.attr('name');
+
+        $.each(states[name].cities, function(index, value) {
+            var li = $('<li />');
+            li.append(value);
+            state.append(li);
+        })
+    });
+
+    var headers = ['First Name', 'Last Name', 'State'];
+
+    var table = $('<table border="1"><thead><tr /></thead></table>');
+
+    //table.addClass('table');
+
+    var tr = table.find('tr');
+
+    $.each(headers, function(index, value) {
+       tr.append($('<th />').append(value));
+    })
+
+    //$('#table').append(table);
+    $('#table').html(table);
+
+    //add data to table by creating a tbody
+    var tbody = $('<tbody />');
+    table.append(tbody);
+
+    $.each(userData.info, function(index, value) {
+        var row = $('<tr />');
+        $.each(value, function(index, value) {
+            var td = $('<td />').append(value);
+            row.append(td);
+        });
+        tbody.append(row);
+    });
+
+    var keys = ['firstname', 'lastname', 'state'];
+    $.each(users, function(index, value) {
+       var tr = $('<tr />');
+        $.each(keys, function(i, v) {
+           var td = $('<td />');
+           td.append(value[v]);
+            tr.append(td);
+        });
+        tbody.append(tr);
+
+    });
+    table.append(tbody);
+
+
+</script>
+
+</body>
+</html>

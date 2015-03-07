@@ -1,0 +1,909 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>HTML : Front-End Bootcamp</title>
+	<meta name="description" content="HTML portion of PayPal Front-End Bootcamp" />
+	<meta name="author" content="Dennis Lembree" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script>
+	/*$(document).bind("mobileinit", function(){
+		$.extend(  $.mobile , {
+			defaultPageTransition: "none"
+		});
+	});*/
+	</script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
+	<style>
+	body {
+		font-size: 1.1em;
+	}
+	#footer {
+		text-align:center;
+	}
+	.tableExample,
+	.tableExample th,
+	.tableExample td {
+		border: 1px #ccc solid;
+		font-family: serif;
+		text-align: left;
+	}
+	.navExample li a.ui-link {
+		font-weight: normal;
+	}
+	.ui-body-d .dlExample dt {
+		font-weight: bold;
+	}
+	ul li,
+	ol li {
+		margin: .25em 0;
+	}
+	div[data-role="content"] a:focus,
+	div[data-role="content"] a:hover {
+		text-decoration: none;
+	}
+	</style>
+</head>
+
+<body>
+
+<!-- SLIDE 0 -->
+<div data-role="page" id="home" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<h1>HTML : Front-End Bootcamp</h1>
+		<a href="#s1" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+	</div>
+	<div data-role="content">
+		<h2>Table of Contents</h2>
+		<ol data-role="listview" data-inset="true">
+			<li><a href="#s1">Intro</a></li>
+			<li><a href="#s2">Methodology</a></li>
+			<li><a href="#s3">Skeleton</a></li>
+			<li><a href="#s4">Doctype and HTML</a></li>
+			<li><a href="#s5">Head and Title</a></li>
+			<li><a href="#s6">Meta</a></li>
+			<li><a href="#s7">Link</a></li>
+			<li><a href="#s8">Script</a></li>
+			<li><a href="#s9">Body and Structure</a></li>
+			<li><a href="#s10">Headings and Sections</a></li>
+			<li><a href="#s11">Tables</a></li>
+			<li><a href="#s12">Forms</a></li>
+			<li><a href="#s13">Forms cont.</a></li>
+			<li><a href="#s14">Divs and Spans</a></li>
+			<li><a href="#s15">Lists</a></li>
+			<li><a href="#s16">Images</a></li>
+			<li><a href="#s17">Anchors and Paras</a></li>
+			<li><a href="#s18">XHTML vs HTML5</a></li>
+			<li><a href="#s19">Order of Code &amp; Content</a></li>
+			<!-- <li><a href="#s18">em/strong/i/b/small</a></li>
+			<li><a href="#s19">figure/figcaption</a></li>
+			<li><a href="#s20">HTML5 audio/video</a></li> -->
+		</ol>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal"> 
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+			<!-- <a href="#share" data-role="button" data-icon="plus" data-rel="dialog" data-transition="slidedown">Share</a> -->
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 1 -->
+<div data-role="page" id="s1" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<h1>Intro</h1>
+		<a href="#home" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s2" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+	</div>
+	<div data-role="content">
+		<p>HTML - HyperText Markup Language</p>
+		<p>Created in 1994 by Tim Berners-Lee</p>
+		<p>HTML4.01, XHTML, HTML5</p>
+		<p>HTML is <strong>the content</strong> of a web page.</p>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 2 -->
+<div data-role="page" id="s2" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<h1>Methodology</h1>
+		<a href="#s1" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s3" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+	</div>
+	<div data-role="content">
+		<p>Semantic HTML - describe meaning of content.</p>
+		<p>Progressive enhancement - start with basics and build on top.</p>
+		<ul>
+			<li>Provides access to basic content and functionality to <strong>all users</strong>.</li>
+			<li>Allows users to consume as much visual and interactive richness as their environment can support.</li>
+			<li>The inverse of "graceful degradation".</li>
+		</ul>
+		<p>The 4 layers:</p>
+		<p><img src="../images/4-layers-mm.jpg" alt="HTML for content, CSS for presentation, JS for behavior, and ARIA to help accessibility" /></p>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 3 -->
+<div data-role="page" id="s3" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s2" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s4" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+		<h1>Skeleton</h1>
+	</div>
+	<div data-role="content">
+		<p><img src="../images/html-structure.png" alt="" /></p>
+<code><pre>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;title&gt;my page&lt;/title&gt;
+
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;&quot; /&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;&quot; /&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;&quot; /&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;foo.css&quot; /&gt;
+  &lt;/head&gt;
+  
+  &lt;body&gt;
+
+    [content here]
+
+  &lt;script src=&quot;bar.js&quot;&gt;&lt;/script&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre></code>
+
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 4 -->
+<div data-role="page" id="s4" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s3" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s5" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+		<h1>Doctype and HTML</h1>
+	</div>
+	<div data-role="content">
+		<p>Document type declaration</p>
+		<pre>&lt;!doctype html&gt;</pre>
+		<ul>
+			<li>Very first line in an HTML document.</li>
+			<li>Tell browsers what mode to render.</li>
+			<li>Also helps when validating your code.</li>
+		</ul>
+		<p>HTML element</p>
+		<pre>&lt;html lang=&quot;en&quot;&gt;</pre>
+		<ul>
+			<li>The root of an HTML or XHTML document</li>
+			<li>Should have lang attribute to declare language of document.</li>
+			<li>May have dir attribute to specify the direction of the text.</li>
+		</ul>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 5 -->
+<div data-role="page" id="s5" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s4" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s6" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+		<h1>Head and Title</h1>
+	</div>
+	<div data-role="content">
+		<p>Head element</p>
+		<pre>&lt;head&gt;&lt;/head&gt;</pre>
+		<ul>
+			<li>Provides information about the document: title, metadata, character set, etc.</li>
+			<li>Traditionally, where external resources are referenced.</li>
+		</ul>
+		<p>Title element</p>
+		<pre>&lt;title&gt;&lt;/title&gt;</pre>
+		<ul>
+			<li>Container for the title of the page</li>
+			<li>Should be similar to H1 text.</li>
+			<li>What displays in browser tab and shorcut, search results, social media, etc.</li>
+		</ul>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 6 -->
+<div data-role="page" id="s6" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s5" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s7" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+		<h1>Meta</h1>
+	</div>
+	<div data-role="content">
+		<p>The <a href="http://www.w3.org/TR/html5/document-metadata.html#meta" rel="external" target="_blank">Meta</a> element has two uses:</p>
+		<ul>
+			<li>Contain metadata about the page (with name and content attributes, except charset).</li>
+			<li>Simulate (not override) an HTTP response header (with http-equiv and content attributes).</li>
+		</ul>
+		
+		<p>Examples:</p>
+		<pre>&lt;meta charset="utf-8"&gt;</pre>
+		<pre>&lt;meta name="description" content="A description about your webpage"&gt;</pre>
+		<pre>&lt;meta http-equiv="Refresh" content="0;url=http://foobar.com/"&gt;</pre>
+
+		<p>Types:</p>
+		<ul>
+			<li>description</li>
+			<li>keywords</li>
+			<li>copyright</li>
+			<li>author</li>
+			<li>robots</li>
+			<li>generator</li>
+		</ul>
+		<ul>
+			<li>refresh [can use to redirect but 301 is recommended]</li>
+			<li>expires</li>
+			<li>location</li>
+			<li>last-modified</li>
+			<li>allow</li>
+		</ul>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 7 -->
+<div data-role="page" id="s7" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s6" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s8" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+		<h1>Link</h1>
+	</div>
+	<div data-role="content">
+		<p><a href="http://www.w3.org/TR/html5/document-metadata.html#the-link-element" rel="external" target="_blank">Link</a> element</p>
+		<ul>
+			<li>Specifies relationship between the current document and external resource</li>
+			<li>Used for external CSS files and application-level icons</li>
+			<li>Attributes include: href, rel, type, media, and sizes (if rel=icon)</li>
+			<li>In HTML5, type attribute not necessary when rel=stylesheet.</li>
+		</ul>
+		<p>Examples:</p>
+		<pre>&lt;link rel="stylesheet" href="/css/foo.css"&gt;</pre>
+		<pre>&lt;link rel="shortcut icon" href="/images/favicon.ico"&gt;</pre>
+		<pre>&lt;link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon.png"&gt;</pre>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 8 -->
+<div data-role="page" id="s8" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s7" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s9" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+		<h1>Script</h1>
+	</div>
+	<div data-role="content">
+		<p><a href="http://www.w3.org/TR/html-markup/script.html">Script</a> element</p>
+		<ul>
+			<li>Includes a client-side scripting.</li>
+			<li>Traditionally is located in header, but most should be placed right before closing body element.</li>
+			<li>In HTML5, type attribute not necessary when the scripting is JavaScript.</li>
+		</ul>
+		<pre>&lt;script src="/include/js/modernizr.js"&gt;&lt;/script&gt;</pre>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 9 -->
+<div data-role="page" id="s9" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s8" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s10" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+		<h1>Body and Structure</h1>
+	</div>
+	<div data-role="content">
+		<p>The body element contains the content of the webpage.</p>
+		<p>Instead of divs to structure a webpage, use HTML5 structural elements.</p>
+		<p>Use WAI-ARIA Landmark roles with the HTML5 structural elements.</p>
+		<p><img src="../images/html5-structural-elements.png" alt="" /></p>
+<code><pre>&lt;body&gt;
+
+&lt;header role=&quot;banner&quot;&gt;
+  &lt;div&gt;My logo&lt;/div&gt;
+  &lt;p&gt;Slogan here&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;nav role=&quot;navigation&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;B&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;C&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;main role=&quot;main&quot;&gt;
+  &lt;h1&gt;Page Title&lt;/h1&gt;
+
+  &lt;article&gt;
+    &lt;h2&gt;Article Title&lt;/h2&gt;
+    &lt;p&gt;Ipsum lorem&lt;/p&gt;
+    &lt;p&gt;Ipsum lorem&lt;/p&gt;
+  &lt;/article&gt;
+
+  &lt;aside role=&quot;complementary&quot;&gt;
+    &lt;h2&gt;Foo&lt;/h2&gt;
+    &lt;p&gt;Ipsum lorem&lt;/p&gt;
+  &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer role=&quot;contentinfo&quot;&gt;
+  &lt;p&gt;&amp;copy; copyright 2014&lt;/p&gt;
+&lt;/footer&gt;
+
+&lt;/body&gt;
+</pre></code>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 10 -->
+<div data-role="page" id="s10" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s9" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s11" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+		<h1>Headings and Sections</h1>
+	</div>
+	<div data-role="content">
+		<p>Use headings and HTML5 sections</p>
+		<ul>
+			<li>H1-H6</li>
+			<li>Heading content defines the header of a section.</li>
+			<li>Recommend one H1 per page (the page title).</li>
+			<li>Always strive for properly nested headings (document outline). Use tools such as the Web Developer Toolbar to test.</li>
+			<li>Benefits readability; accessibility, SEO.</li>
+			<li>Never use text formatting (such as larger font size or bolding) to give the visual appearance of headings; use the H element and modify with CSS.</li>
+			<li>Never overuse the Section element. Should have enough content to require a heading.</li>
+		</ul>
+<pre>
+&lt;section aria-labelledby=&quot;hdWeather&quot;&gt;
+  &lt;h2 id=&quot;hdWeather&quot;&gt;Weather report&lt;/h2&gt;
+  ...
+&lt;/section&gt;
+</pre>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 11 -->
+<div data-role="page" id="s11" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s10" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s12" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+		<h1>Tables</h1>
+	</div>
+	<div data-role="content">
+		<p><a href="http://www.w3.org/TR/html5/tabular-data.html" rel="external" target="_blank">Table element</a></p>
+		<ul>
+			<li>Represents data with more than one dimension, in the form of a table</li>
+			<li>Use for data only (not layout)</li>
+			<li>Elements: table, caption, thead, tbody, tfoot, tr, th, td</li>
+			<li>Exercise: think of a hobby and create a data table with related information</li>
+		</ul>
+		<hr />
+<pre>&lt;p id=&quot;summary&quot;&gt;In the following table, negative and positive characteristics are provided.&lt;/p&gt;
+&lt;table aria-describedby=&quot;summary&quot;&gt;
+ &lt;caption&gt;State of Characteristics&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th scope="col"&gt;Characteristic&lt;/th&gt;
+   &lt;th scope="col"&gt;Negative&lt;/th&gt;
+   &lt;th scope="col"&gt;Positive&lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;th scope="row"&gt;Mood&lt;/th&gt;
+   &lt;td&gt;Sad&lt;/th&gt;
+   &lt;td&gt;Happy&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;th scope="row"&gt;Grade&lt;/th&gt;
+   &lt;td&gt;Failing&lt;/th&gt;
+   &lt;td&gt;Passing&lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;tbody&gt;
+&lt;/table&gt;</pre>
+		<hr />
+		<p id="summary">In the following table, negative and positive characteristics are provided.</p>
+		<table aria-describedby="summary" class="tableExample">
+		 <caption>State of Characteristics</caption>
+		 <thead>
+		  <tr>
+		   <th scope="col">Characteristic</th>
+		   <th scope="col">Negative</th>
+		   <th scope="col">Positive</th>
+		 </thead>
+		 <tbody>
+		  <tr>
+		   <th scope="row">Mood</th>
+		   <td>Sad</th>
+		   <td>Happy</th>
+		  <tr>
+		   <th scope="row">Grade</th>
+		   <td>Failing</th>
+		   <td>Passing</th>
+		 <tbody>
+		</table>
+		<p>&nbsp;</p>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 12 -->
+<div data-role="page" id="s12" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s11" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s13" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+		<h1>Forms</h1>
+	</div>
+	<div data-role="content">
+		<p>The <a href="http://www.w3.org/TR/html5/forms.html" rel="external" target="_blank">Form</a> element</p>
+		<p>"The form element represents a collection of form-associated elements, some of which can represent editable values that can be submitted to a server for processing."</p>
+		<ul>
+			<li>Form attributes: action, method, enctype, accept-charset [id, class]</li>
+			<li>Form elements: form, fieldset, legend, label, input, button, select, textarea, meter</li>
+			<li>Input types: text, checkbox, radio, button, hidden, file, search, color, reset, image, tel, url, email, password, date, time, number, range, color</li>
+			<li>Input attributes: autocomplete, autofocus, checked, maxlength, pattern, size, placeholder, required</li>
+		</ul>
+		<p>Tips</p>
+		<ul>
+			<li>Use enctype="multipart/form-data" with input type="file".</li>
+			<li>Use autocomplete="off" for security.</li>
+			<li>Use autofocus rather than JavaScript.</li>
+			<li>Placeholder is not a label.</li>
+			<li>Be cautious when using the newer HTML5 input types.</li>
+		</ul>
+<pre>&lt;form action=&quot;foo.url&quot; method=&quot;post&quot;&gt;
+  &lt;label for=&quot;firstname&quot;&gt;First name: &lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;firstname&quot; /&gt;
+
+  &lt;label for=&quot;lastname&quot;&gt;Last name: &lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;lastname&quot; /&gt;
+
+  &lt;button type=&quot;submit&quot;&gt;Send&lt;/button&gt;
+&lt;/form&gt;</pre>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 13 -->
+<div data-role="page" id="s13" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s12" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s14" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+		<h1>Forms cont.</h1>
+	</div>
+	<div data-role="content">
+		<p>Accessibility</p>
+		<ul>
+			<li>Always provide a Label for an input element.</li>
+			<li>Always associate the Label with input element using 'for' and 'id' attributes.</li>
+			<li>Always provide a submit button.</li>
+			<li>Use ARIA for form hints and form validation.</li>
+			<li>Be sure to check your work with multiple browsers (not just Chrome!) as visual treatment (such as focus oulines) may differ.</li>
+			<li>Be aware that if using HTML5, or even ARIA, that a form could still not be ideally accessible.</li>
+		</ul>
+		<p>About fieldset/legend</p>
+		<ul>
+			<li>Use Fieldset/Legend to divide long forms and with radio/checkbox groups.</li>
+			<li>When using Fieldset/Legend with radio/checkbox groups, if the Legend contains long text, ARIA can be used instead.</li>
+		</ul>
+<pre>
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Full name&lt;/legend&gt;
+    &lt;label for=&quot;firstname&quot;&gt;First name: &lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;firstname&quot; name=&quot;firstname&quot; /&gt;
+
+    &lt;label for=&quot;middlename&quot;&gt;Middle name: &lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;middlename&quot; name=&quot;middlename&quot; /&gt;
+
+    &lt;label for=&quot;lastname&quot;&gt;Last name: &lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;lastname&quot; name=&quot;lastname&quot; /&gt;
+  &lt;/fieldset&gt;
+  ...
+  &lt;button type=&quot;submit&quot;&gt;Send&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+<!-- <form>
+	<fieldset>
+	<legend>Full name</legend>
+		<label for="firstname">First name: </label>
+		<input type="text" id="firstname" name="firstname" />
+		 
+		<label for="middlename">Middle name: </label>
+		<input type="text" id="middlename" name="middlename" />
+		 
+		<label for="lastname">Last name: </label>
+		<input type="text" id="lastname" name="lastname" />
+	</fieldset>
+	<button type="submit">Send</button>
+</form> -->
+
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 14 -->
+<div data-role="page" id="s14" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s13" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s15" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+		<h1>Divs and Spans</h1>
+	</div>
+	<div data-role="content">
+		<p>div element - provides a way of dividing a document into meaningful block-level areas (a division)</p>
+		<p>span element - a generic mechanism for adding in-line structure to documents</p>
+		<p>Only use when:
+		<ul>
+			<li>No other (more semantic) HTML element is appropriate.</li>
+			<li>For styling purposes when absolutely necessary.</li>
+		</ul>
+<pre>&lt;div id=&quot;searchModal&quot; role=&quot;dialog&quot; class=&quot;modal&quot; aria-label=&quot;Search&quot; tabindex=&quot;-1&quot;&gt;</pre>
+<pre>&lt;h2&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;icon-mail&quot;&gt;&lt;/span&gt; Email Addresses&lt;/h2&gt;</pre>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 15 -->
+<div data-role="page" id="s15" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s14" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s16" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+		<h1>Lists</h1>
+	</div>
+	<div data-role="content">
+		<p>Lists</p>
+		<ul>
+			<li>UL - unordered list (bulleted)</li>
+			<li>OL - ordered list (numbered)</li>
+			<li>DL - definition list</li>
+		</ul>
+		<p>Examples:</p>
+		<p>Navigation</p>
+<pre>&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;buy.html&quot;&gt;Buy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;sell.html&quot;&gt;Sell&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;send.html&quot;&gt;Send&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+		<ul class="navExample">
+			<li><a href="buy.html">Buy</a></li>
+			<li><a href="sell.html">Sell</a></li>
+			<li><a href="send.html">Send</a></li>
+		</ul>
+		<hr />
+
+		<p>Steps</p>
+<pre>&lt;ol&gt;
+  &lt;li&gt;Buy some milk and chocolate sauce.&lt;/li&gt;
+  &lt;li&gt;Pour the milk into a glass.&lt;/li&gt;
+  &lt;li&gt;Stir and drink.&lt;/li&gt;
+&lt;/ol&gt;</pre>
+		<ol>
+		  <li>Buy some milk and chocolate sauce.</li>
+		  <li>Pour the milk into a glass.</li>
+		  <li>Stir and drink.</li>
+		</ol>
+		<hr />
+
+		<p>Glossary</p>
+<pre>&lt;dl&gt;
+  &lt;dt&gt;SGML&lt;/dt&gt;
+  &lt;dd&gt;Standard Generalized Markup Language&lt;/dd&gt;
+
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;Hypertext Markup Language&lt;/dd&gt;
+
+  &lt;dt&gt;XHTML&lt;/dt&gt;
+  &lt;dd&gt;Extensible HyperText Markup Language&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+		<dl class="dlExample">
+			<dt>SGML</dt>
+			<dd>Standard Generalized Markup Language</dd>
+			<dt>HTML</dt>
+			<dd>Hypertext Markup Language</dd>
+			<dt>XHTML</dt>
+			<dd>Extensible HyperText Markup Language</dd>
+		</dl>
+
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 16 -->
+<div data-role="page" id="s16" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s15" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s17" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+		<h1>Images</h1>
+	</div>
+	<div data-role="content">
+		<p>The <a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-img-element" rel="external" target="_blank">IMG</a> element</p>
+		<p>The attributes:</p>
+		<ul>
+			<li>src - address of the resource</li>
+			<li>width</li>
+			<li>height</li>
+			<li>alt - replacement text for use when images are not available.</li>
+		</ul>
+		<pre>&lt;img src=&quot;smiley.png&quot; width=&quot;200&quot; height=&quot;100&quot; alt=&quot;line drawing of a smiley face&quot; /&gt;</pre>
+		<p>Tips:</p>
+		<ul>
+			<li>Sprites cause accessibility issues (often missing content, don't appear in Windows high-contrast mode).</li>
+			<li>NEVER use background image when the image is not a sprite.</li>
+			<li>Avoid text in images (bad for readability, maintainability, internationalization).</li>
+		</ul>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 17 -->
+<div data-role="page" id="s17" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s16" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s18" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+		<h1>Anchors and Paras</h1>
+	</div>
+	<div data-role="content">
+		<p>The A element (the hyperlink)</p>
+		<pre>&lt;a href=&quot;profile.html&quot;&gt;my profile&lt;/a&gt;</pre>
+		<ul>
+			<li>Always use HREF.</li>
+			<li>Always use a valid value in the HREF.</li>
+			<li>Always use textual link content (or image with alt value).</li>
+			<li>The link text should be meaningful out of context.<br />For example, a text link should be unique to the page on which it appears; and it's bad practice to use "Click here" or "More".</li>
+			<li>NEVER recreate an element, for example: <pre>&lt;div onClick=&quot;fool();&quot;&gt;&lt;/div&gt;</pre></li>
+		</ul>
+		<hr />
+		<p>The P element (the paragraph)</p>
+		<pre>&lt;p&gt;This is a line of text in a paragraph.&lt;/p&gt;</pre>
+		<ul>
+			<li>If it's a paragraph (even if one line), use P.</li>
+			<li>If styling appears like a heading, use P with CSS to changes the visible appearance.</li>
+			<li>NEVER use the BR elements to create the visual effect of paragraphs.</li>
+		</ul>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 18 -->
+<div data-role="page" id="s18" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s17" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s19" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+		<h1>XHTML vs HTML5</h1>
+	</div>
+	<div data-role="content">
+		<h2>Syntax differences</h2>
+		<p>XHTML was much more strict. Recommend using the XHTML-type formatting.</p>
+		<ul>
+			<li>Elements and attributes must be in lowercase.</li>
+			<li>Attributes must be within quotes.</li>
+			<li>All elements must be closed.</li>
+		</ul>
+		<h2>Changed elements and attributes (partial)</h2>
+		<ul>
+			<li>The cite element now solely represents the title of a work not a person's name.</li>
+			<li>The hr element now represents a paragraph-level thematic break.</li>
+			<li>The small element now represents side comments such as small print.</li>
+			<li>The name attribute on a; use the id attribute instead.</li>
+		</ul>
+		<p></p>
+		<h2>Removed Elements (partial)</h2>
+		<ul>
+			<li>frame, frameset, noframes</li>
+			<li>acronym (use abbr)</li>
+			<li>applet (use object)</li>
+			<li>big, center, font (use CSS)</li>
+		</ul>
+		<h2>What's new HTML5 (partial)</h2>
+		<ul>
+			<li>Structural elements: header, footer, main, nav, section, aside, article</li>
+			<li>Other new elements: progress, meter, figure/figcaption, datalist, menu, summary/details</li>
+			<li>New form input types: number, color, tel, url, range, email, date, time</li>
+			<li>New attributes: placeholder, autofocus, async, reversed, data-*</li>
+			<li>Audio and Video</li>
+			<li>Canvas</li>
+			<li>Geolocation</li>
+			<li>History API</li>
+			<li>File API</li>
+			<li>Drag &amp; Drop API</li>
+			<li>Web Sockets</li>
+			<li>WebGL (for 3D graphics)</li>
+			<li>Web storage (<s>sessionStorage</s>, localStorage, Web SQL)</li>
+			<li>Offline (cache manifest)</li>
+		</ul>
+		<p>More from W3C on <a href="http://www.w3.org/TR/html5-diff/">Differences between HTML4 and HTML5</a>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 19 -->
+<div data-role="page" id="s19" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s18" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<!-- <a href="#s20" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a> -->
+		<h1>Order of Code &amp; Content</h1>
+	</div>
+	<div data-role="content">
+		<p><strong>code order === content order === tab order</strong></p>
+		<ul>
+			<li>This technique is quite feasible (especially due to the power of CSS).</li>
+			<li>In general, makes code lighter and easier to maintain.</li>
+			<li>Optimal for accessibility.</li>
+			<li>Never use tabindex=1+. <a href="http://www.paciellogroup.com/blog/2014/08/using-the-tabindex-attribute/">Using the tabindex attribute</a></li>
+		</ul>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div>
+
+<!-- SLIDE 20 -->
+<!-- <div data-role="page" id="s19" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<a href="#s19" data-role="button" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+		<a href="#s21" data-role="button" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+		<h1>Slide</h1>
+	</div>
+	<div data-role="content">
+		<p>content</p>
+		<p>a</p>
+		<p>a</p>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div id="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#home" data-role="button" data-icon="home" data-direction="reverse">Home</a>
+			<a href="#info" data-role="button" data-icon="info" data-rel="dialog" data-transition="slidedown">Info</a> 
+		</div>
+	</div>
+</div> -->
+
+<!-- SLIDE INFO -->
+<div data-role="page" id="info" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<h1>Info</h1>
+	</div>
+	<div data-role="content">
+		<p>Front-End Bootcamp : HTML</p>
+		<p><a href="https://github.paypal.com/dlembree/fe-bootcamp-html">View on GitHub</a></p>
+		<p>written by Dennis Lembree @DennisL</p>
+		<p><a href="index.html" data-role="button" data-rel="back">Close</a></p>
+	</div>
+</div>
+
+<!-- SLIDE SHARE -->
+<!-- <div data-role="page" id="share" data-theme="d">
+	<div data-role="header" data-theme="d">
+		<h1>Share</h1>
+	</div>
+	<div data-role="content">
+		<p><a href="http://twitter.com/home?status=NAME+URL_HERE" data-role="button">Twitter</a> 		
+		</p><p><a href="http://www.facebook.com/sharer.php?u=URL_HERE" data-role="button">Facebook</a> 		
+		</p><p><a href="index.html" data-role="button" data-rel="back">Close</a></p>
+	</div>
+</div> -->
+
+<script>
+$(document).keydown(function(e) {
+	if(e.keyCode ==27) { // Escape
+		$('div#share').find('a.ui-btn-left.ui-shadow.ui-btn-corner-all.ui-btn-icon-notext').click();
+		$('div#info').find('a.ui-btn-left.ui-shadow.ui-btn-corner-all.ui-btn-icon-notext').click();
+		return false;
+	};
+})
+</script>
+
+</body>
+</html>

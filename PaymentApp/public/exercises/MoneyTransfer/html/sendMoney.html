@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Money Transfer App</title>
+    <link rel="stylesheet" type="text/css" href="/css/appstyles.css"/>
+</head>
+<body>
+
+<div id="frame">
+    <div class="dialogBackground"></div>
+        <div id="spinner" class="spinner">
+        <img class="spinnerImg" src="/images/spinner.gif" alt="Waiting for Service Response!!">
+    </div>
+    <form id="sendMoney">
+    <div id="header" class="header">
+        <h1 id="title">Send Money</h1>
+    </div>
+    <div id="middleframe" class="middleframe">
+        <div class="formRow">
+            <div class="formCol">
+                <label for="to">To:</label>
+            </div>
+            <div class="formCol dataInput2">
+                <input class="dataInput" type="text" name="to" id="to" required>
+            </div>
+            <div class="formCol dataInput3">
+                <img src="/images/Checkbox.jpg" alt="Checked">
+            </div>
+        </div>
+        <div class="formRow">
+            <div class="formCol">
+                <label for="amount">Amount:</label>
+            </div>
+            <div class="formCol dataInput2">
+                <input class="dataInput" type="text" name="to" id="to" required>
+            </div>
+            <div class="formCol dataInput3">
+                <select>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="JPY">JPY</option>
+                </select>
+            </div>
+        </div>
+        <div class="formRow">
+            <div>
+                <label for="message">Message (optional):</label>
+            </div>
+            <div>
+                <textarea class="message" rows="5" cols="50" name="message" id="message"></textarea>
+            </div>
+        </div>
+        <div class="noBorderRow">What's this payment for?</div>
+        <div class="formRow">
+            <div class="radio">
+                <div>
+                    <label class="i-checks">
+                        <input type="radio" value="sendToFamily" name="sendMoney"> <i></i>I'm sending money to family or friends
+                    </label>
+                </div>
+                <div>
+                    <label class="i-checks">
+                        <input type="radio" value="payForGoods" name="sendMoney"> <i></i>I'm paying for goods or services
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="header">
+        <div class="footerButtonRow">
+            <button id="clear"class="buttons">Clear</button>
+        </div>
+        <div class="footerButtonRow">
+            <button id="next"class="buttons">Next</button>
+        </div>
+
+    </div>
+     </form>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+
+<script>
+    //clear the form on click of Clear Button
+    $('#clear').click(function(event) {
+        //event.preventDefault();
+        $('#myForm').trigger('reset');
+    });
+    //on click of Next
+    $('#next').click(function(event) {
+        event.preventDefault(); //prevents the default form submit and instead allow me to use my own action
+        $('.dialogBackground').show();
+        $('#spinner').show();
+    });
+</script>
+
+</body>
+</html>

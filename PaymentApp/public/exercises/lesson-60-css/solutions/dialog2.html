@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CSS Exercises</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+    <!-- enter style information below -->
+    <style>
+
+        header {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            z-index: 10;
+        }
+
+        nav {
+            padding-top: 100px;
+        }
+
+        .dialogContainer {
+            xxvisibility: hidden;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 100px;
+            left: 0%;
+            background-color: white;
+            opacity: 0.4;
+        }
+
+        .dialog {
+            width: 50%;
+            margin: auto;
+            border: solid 2px black;
+            font-size: 1.5em;
+            opacity: 1.0;
+            background-color: white;
+        }
+
+        .dialogBody {
+            padding-top: 25px;
+            border-top: solid 2px black;
+            border-bottom: solid 2px black;
+        }
+
+        .dialogTitle {
+            height: 40px;
+            padding: 5px;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .dialogCancel {
+            height: 100%;
+            width: 40px;
+            font-size: 30px;
+            color: red;
+            display: inline-block;
+            position: relative;
+            top: 50%;
+            left: 0%;
+        }
+
+        .dialogButtons {
+            height: 40px;
+            padding: 5px;
+        }
+
+        .formRow {
+            width: 95%;
+            margin: 3px auto;
+        }
+
+        .formRow label {
+            width: 30%;
+            display: inline-block;
+        }
+
+        .formRow input {
+            width: 60%;
+        }
+
+        div.button {
+            width: 45%;
+            display: inline-block;
+            text-align: center;
+            margin: 25px auto;
+        }
+        div.button button {
+            margin: 0px auto;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="/images/PP_TechnologyEdLogo.jpg" height="46" width="126">
+
+    <h1>Front End Bootcamp</h1>
+</header>
+<nav>
+    <a href="/">Home</a> |
+    <a href="/exercises">Exercises</a>
+    <a id="loginLink" href="/login">Sign In</a>
+</nav>
+
+<div class="dialogContainer">
+    <div class="dialog">
+        <div class="dialogTitle">
+            Please enter your email and password.
+        </div>
+        <div class="dialogBody">
+            <form id="loginForm">
+                <div class="formRow">
+                    <label for="username">Email</label>
+                    <input type="text" id="username"/>
+                </div>
+                <div class="formRow">
+                    <label for="password">Password</label>
+                    <input type="password" id="password">
+                </div>
+                <div class="formRow">
+                    <div class="button">
+                        <button id="login">Login</button>
+                    </div>
+                    <div class="button">
+                        <button id="cancel">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="center">
+
+    This is the text content of the page.
+
+</div>
+
+<footer>
+    <h1>Thank you for attending</h1>
+</footer>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/application.js"></script>
+
+<script>
+    // enter javascript here
+</script>
+</body>
+</html>

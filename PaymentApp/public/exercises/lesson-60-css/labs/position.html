@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CSS Exercises</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+    <!-- enter style information below -->
+    <style>
+
+        div.parent {
+            position: relative;
+        }
+        div.child {
+            background-color: red;
+            color: white;
+            width: 50px;
+            height: 50px;
+            padding: 5px 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+        #parent {
+            border: solid 1px black;
+        }
+        #one {
+            position: static;
+        }
+        #two {
+            position: relative;
+            top: 20px;
+            left: 10px;
+        }
+        #two:hover {
+            position: static;
+        }
+        #three {
+            position: static;
+        }
+        #four {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        #five {
+            position: fixed;
+            top: 300px;
+            left: 100px;
+        }
+        header {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            z-index: 10;
+        }
+        nav {
+            padding-top:100px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="../../../images/PP_TechnologyEdLogo.jpg" height="46" width="126">
+
+    <h1>Front End Bootcamp</h1>
+</header>
+
+<nav>
+    <a href="/">Home</a> |
+    <a href="/exercises">Exercises</a>
+</nav>
+
+<div id="center">
+
+    <div id="parent" class="parent">
+        <div id="one" class="child">One</div>
+        <div id="two" class="child">Two</div>
+        <div id="three" class="child">Three</div>
+        <div id="four" class="child">Four</div>
+        <div id="five" class="child">Five</div>
+    </div>
+
+</div>
+
+<footer>
+    <h1>Thank you for attending</h1>
+</footer>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/application.js"></script>
+
+<script>
+    // enter javascript here
+</script>
+</body>
+</html>

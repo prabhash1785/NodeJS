@@ -1,0 +1,20 @@
+
+
+autocomplete
+autofocus
+height and width
+list
+min and max
+multiple
+pattern (regexp)
+placeholder
+required
+step
+
+
+form
+formaction
+formenctype
+formmethod
+formnovalidate
+formtarget
