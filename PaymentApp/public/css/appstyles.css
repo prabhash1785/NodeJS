@@ -83,7 +83,7 @@ img {
     padding: 5px;
 }
 div.dialogBackground {
-    background-color: black;
+    background-color: white;
     opacity: 0.5;
     z-index: 10;
     position: absolute;
@@ -96,7 +96,7 @@ div.dialogBackground {
     margin-left: 290px;
 }
 div.spinner {
-    opacity: 0;
+    opacity: 1;
     z-index: 20;
     position: absolute;
     width: 35%;
