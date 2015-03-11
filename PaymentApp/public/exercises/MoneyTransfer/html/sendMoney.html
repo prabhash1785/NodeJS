@@ -8,7 +8,7 @@
 <body>
 
 <div id="frame">
-    <div class="dialogBackground"></div>
+    <div class="spinnerBackground"></div>
     <div id="spinner" class="spinner">
         <img class="spinnerImg" src="/images/spinner.gif" alt="Waiting for Service Response!!">
     </div>
@@ -91,7 +91,7 @@
     //on click of Next
     $('#next').click(function(event) {
         event.preventDefault(); //prevents the default form submit and instead allow me to use my own action
-        $('.dialogBackground').show();
+        $('.spinnerBackground').show();
         $('#spinner').show();
     });
 </script>

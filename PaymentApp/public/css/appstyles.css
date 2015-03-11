@@ -82,8 +82,8 @@ img {
     margin: 10px;
     padding: 5px;
 }
-div.dialogBackground {
-    background-color: white;
+div.spinnerBackground {
+    background-color: black;
     opacity: 0.5;
     z-index: 10;
     position: absolute;
