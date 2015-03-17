@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        window.onload = function() {
+            var myForm = document.createElement("form");
+            myForm.target = "Tool";
+            myForm.method = "POST"; // or "post" if appropriate
+            myForm.action = "http://localhost:8000/cardmigrationtoolnodeweb/all";
+
+            var accessToken = document.createElement("input");
+            accessToken.type = "hidden";
+            accessToken.name = "accessToken";
+            accessToken.value = "abcde12345";
+            myForm.appendChild(accessToken);
+
+            var execution = document.createElement("input");
+            execution.type = "hidden";
+            execution.name = "execution";
+            execution.value = "{data.flowExecutionKey}";
+            myForm.appendChild(execution);
+
+            var _csrf = document.createElement("input");
+            _csrf.type = "hidden";
+            _csrf.name = "_csrf";
+            _csrf.value = "{_csrf}";
+            myForm.appendChild(_csrf);
+
+            document.body.appendChild(myForm);
+
+            var nodeApp = window.open("", "Tool");
+
+            if (nodeApp) {
+                myForm.submit();
+            } else {
+                alert('You must allow popups for this flow to work.');
+            }
+        };
+    </script>
+
+</head>
+<body>
+
+<div>
+    This is the source page which will transfer data to destination through hidden parameters.
+</div>
+
+</body>
+
+</html>
