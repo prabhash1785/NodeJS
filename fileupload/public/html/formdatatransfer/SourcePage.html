@@ -6,38 +6,73 @@
 
     <script>
         window.onload = function() {
-            var myForm = document.createElement("form");
-            myForm.target = "Tool";
-            myForm.method = "POST"; // or "post" if appropriate
-            myForm.action = "http://localhost:8000/cardmigrationtoolnodeweb/all";
+//            var myForm = document.createElement("form");
+//            //myForm.target = "_blank";
+//            myForm.target = "Tool";
+//            myForm.method = "POST"; // or "post" if appropriate
+//            //myForm.action = "http://localhost:8000/cardmigrationtoolnodeweb/uploadForm";
+//            //myForm.action = "https://cardmigrationtoolnodeweb9587.lvs01.dev.ebayc3.com/cardmigrationtoolnodeweb/all";
+//            myForm.action = "http://localhost:8000/cardmigrationtoolnodeweb/login";
+//
+//            var accessToken = document.createElement("input");
+//            accessToken.type = "hidden";
+//            accessToken.name = "accessToken";
+//            accessToken.value = "abcde12345";
+//            myForm.appendChild(accessToken);
+//
+////            var execution = document.createElement("input");
+////            execution.type = "hidden";
+////            execution.name = "execution";
+////            execution.value = "{data.flowExecutionKey}";
+////            myForm.appendChild(execution);
+////
+////            var _csrf = document.createElement("input");
+////            _csrf.type = "hidden";
+////            _csrf.name = "_csrf";
+////            _csrf.value = "{_csrf}";
+////            myForm.appendChild(_csrf);
+//
+//            document.body.appendChild(myForm);
+//
+//            //var nodeApp = window.open("", "_blank");
+//
+////            if (true) {
+////                myForm.submit();
+////            } else {
+////                alert('You must allow popups for this flow to work.');
+////            }
+//
+//            myForm.submit();
 
-            var accessToken = document.createElement("input");
-            accessToken.type = "hidden";
-            accessToken.name = "accessToken";
-            accessToken.value = "abcde12345";
-            myForm.appendChild(accessToken);
 
-            var execution = document.createElement("input");
-            execution.type = "hidden";
-            execution.name = "execution";
-            execution.value = "{data.flowExecutionKey}";
-            myForm.appendChild(execution);
+            var cardMigrationForm = document.createElement("form");
+            cardMigrationForm.target = "CardMigrationTool";
+            cardMigrationForm.method = "POST";
+            cardMigrationForm.action = "http://localhost:8000/cardmigrationtoolnodeweb/uploadForm";
 
-            var _csrf = document.createElement("input");
-            _csrf.type = "hidden";
-            _csrf.name = "_csrf";
-            _csrf.value = "{_csrf}";
-            myForm.appendChild(_csrf);
+            var authenticatedToken = document.createElement("input");
+            authenticatedToken.type = "hidden";
+            authenticatedToken.name = "authenticatedToken";
+            authenticatedToken.value = "Q5IYSsLjzal2cyGKtWbwyEa4W4TYRMkLREWebWM0iN-JM1R3MAcFNJ0C8gXnmGA0LTtWBCAABbWVsoWE9KL7qIYDa3QtrWOnYz5IMypp6heJE1crkq.BVdruVmeNga32lhzHBBUYnurSXFIsiWAUVQm1LlBWIpX77vxDjVaewBszBmy4-Sp57ufo5ymjll2f4Sk7l95Gl4eGe6Sv3vtH7xoctfrADqzV84W8l8StfMQ79o77u5AyJcYC85MlazNdOQFVHeXaqVj00CWR";
+            cardMigrationForm.appendChild(authenticatedToken);
 
-            document.body.appendChild(myForm);
+            var actorName = document.createElement("input");
+            actorName.type = "hidden";
+            actorName.name = "actorName";
+            actorName.value = "Prabhash Rathore";
+            cardMigrationForm.appendChild(actorName);
 
-            var nodeApp = window.open("", "Tool");
+            document.body.appendChild(cardMigrationForm);
 
-            if (nodeApp) {
-                myForm.submit();
+            var cardMigToolWindow = window.open("", "CardMigrationTool");
+
+            if(cardMigToolWindow) {
+                cardMigrationForm.submit();
             } else {
-                alert('You must allow popups for this flow to work.');
+                alert("You must allow popups for this flow to work!");
             }
+
+
         };
     </script>
 
