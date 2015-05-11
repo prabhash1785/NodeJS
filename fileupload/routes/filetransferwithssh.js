@@ -74,7 +74,7 @@ module.exports = function(options) {
             "port": 22,
             "username": "username",
             //"password":"password"
-            "privateKey": fs.readFileSync("/Users/prrathore/.ssh/id_rsa")
+            "privateKey": fs.readFileSync("/Users/username/.ssh/id_rsa")
         }
     );
 
