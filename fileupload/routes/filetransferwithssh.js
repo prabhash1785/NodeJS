@@ -70,10 +70,10 @@ module.exports = function(options) {
 
     conn.connect(
         {
-            "host": "stage2c6724.qa.paypal.com",
+            "host": "machine_name",
             "port": 22,
-            "username": "prrathore",
-            //"password":"password!"
+            "username": "username",
+            //"password":"password"
             "privateKey": fs.readFileSync("/Users/prrathore/.ssh/id_rsa")
         }
     );
