@@ -21,8 +21,10 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
 
+    //register the jshint task
     grunt.registerTask('lint', ['jshint']);
 
+    //register the log task
     grunt.registerMultiTask('log', 'Log stuff.', function() {
         grunt.log.writeln(this.target + ': ' + this.data);
     });
