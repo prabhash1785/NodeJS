@@ -97,7 +97,7 @@ function employeeTool() {
         } else {
             self.emit('error');
         }
-    }
+    };
 
 
 }
