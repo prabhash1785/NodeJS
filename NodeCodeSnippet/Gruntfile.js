@@ -4,6 +4,10 @@
 
 module.exports = function(grunt) {
 
+    require('grunt-config-dir')(grunt, {
+        configDir: require('path').resolve('tasks')
+    });
+
     grunt.initConfig({
         jshint: {
             files: ['event/**/*.js'],
@@ -41,5 +45,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', 'My "default" task description.', function() {
         grunt.log.writeln('Currently running the "default" task.');
     });
+
+    grunt.registerTask('sum', 'Print sum of two numbers', ['sumofnumbers']);
 
 };
