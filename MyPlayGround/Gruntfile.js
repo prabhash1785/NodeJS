@@ -31,9 +31,17 @@ grunt.registerTask('taskvalidator', 'validate if a task exist', function(tasknam
 
     grunt.log.writeln(taskname + ' exists: ' + grunt.task.exists(taskname));
 
-    //run a task if it exists
-    if(grunt.task.exists(taskname)) {
-        grunt.log.writeln("Going to run this task: " + taskname);
+});
+
+grunt.registerTask('validateandruntask', 'if task available then run given task', function(taskname) {
+   if(!taskname || !taskname.length) {
+       grunt.warn('task name is needed to run this task');
+   }
+
+    if(!grunt.task.exists(taskname)) {
+        grunt.log.writeln('this task does not exist!');
+    } else {
+        grunt.log.writeln(taskname + ' exists. Going to run this task');
         grunt.task.run(taskname);
     }
 
