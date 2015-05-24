@@ -4,16 +4,12 @@
  * Created by prrathore on 5/23/15.
  */
 
-function sum(grunt) {
+module.exports = function (grunt) {
 
-    grunt.loadTasks('sumofnumbers');
-
-    return {
-        sum: function() {
-            return "hello custom grunt task";
-        }
-    }
+    grunt.registerTask('sum', 'sum of two numbers', function(a, b) {
+        grunt.log.writeln(a + ' + ' + b + ' = ' + (a + b));
+    });
 
 };
 
-module.exports = sum;
+

@@ -46,6 +46,6 @@ module.exports = function(grunt) {
         grunt.log.writeln('Currently running the "default" task.');
     });
 
-    grunt.registerTask('sum', 'Print sum of two numbers', ['sumofnumbers']);
+    grunt.registerTask('sum', 'Print sum of two numbers', require('./tasks/sumofnumbers')(grunt));
 
 };
