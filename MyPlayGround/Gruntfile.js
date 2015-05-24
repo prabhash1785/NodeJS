@@ -20,3 +20,6 @@ grunt.registerTask('hello', 'greeting task', function(name) {
 
 });
 
+grunt.registerTask('gruntversion', 'get grunt version', function() {
+   grunt.log.writeln('Grunt version is: ' + grunt.version);
+});
