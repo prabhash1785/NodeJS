@@ -6,8 +6,8 @@
 
 var grunt = require('grunt');
 
-grunt.registerTask('sayhello', 'this task prints hello', function() {
-    console.log('hello grunt');
+grunt.registerTask('default', 'default task', function() {
+    console.log('I am the default task.');
 });
 
 
