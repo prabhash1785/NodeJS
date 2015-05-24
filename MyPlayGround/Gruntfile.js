@@ -10,4 +10,10 @@ grunt.registerTask('default', 'default task', function() {
     console.log('I am the default task.');
 });
 
+grunt.registerTask('hello', 'greeting task', function(name) {
+   if(!name || !name.length)
+        grunt.warn('you need to provide a name');
 
+    console.log('hello ' + name + '!');
+
+});
