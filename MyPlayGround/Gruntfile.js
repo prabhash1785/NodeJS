@@ -24,4 +24,20 @@ grunt.registerTask('gruntversion', 'get grunt version', function() {
    grunt.log.writeln('Grunt version is: ' + grunt.version);
 });
 
+grunt.registerTask('taskvalidator', 'validate if a task exist', function(taskname) {
+   if(!taskname || !taskname.length) {
+       grunt.fatal('Cannot run this task without task name');
+   }
+
+    grunt.log.writeln(taskname + ' exists: ' + grunt.task.exists(taskname));
+
+    //run a task if it exists
+    if(grunt.task.exists(taskname)) {
+        grunt.log.writeln("Going to run this task: " + taskname);
+        grunt.task.run(taskname);
+    }
+
+});
+
 grunt.registerTask('multitask', 'runs multiple tasks', ['gruntversion', 'default', 'hello:Ricky']);
+
