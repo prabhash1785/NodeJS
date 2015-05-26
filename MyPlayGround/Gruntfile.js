@@ -20,6 +20,11 @@ grunt.registerTask('hello', 'greeting task', function(name) {
 
 });
 
+grunt.registerTask('sum', 'sum of two numbers', function sum(a, b) {
+    var c = a + b;
+    grunt.log.writeln('sum is: ' + c);
+});
+
 grunt.registerTask('gruntversion', 'get grunt version', function() {
    grunt.log.writeln('Grunt version is: ' + grunt.version);
 });
@@ -48,4 +53,3 @@ grunt.registerTask('validateandruntask', 'if task available then run given task'
 });
 
 grunt.registerTask('multitask', 'runs multiple tasks', ['gruntversion', 'default', 'hello:Ricky']);
-
