@@ -21,7 +21,11 @@ grunt.registerTask('hello', 'greeting task', function(name) {
 });
 
 grunt.registerTask('sum', 'sum of two numbers', function sum(a, b) {
-    var c = a + b;
+    if(!a || !b) {
+        grunt.warn('This task needs two parameters to print the sum');
+    }
+
+    var c = parseInt(a) + parseInt(b); //parse the parameters to integer
     grunt.log.writeln('sum is: ' + c);
 });
 
