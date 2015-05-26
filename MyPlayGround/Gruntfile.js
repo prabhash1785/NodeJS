@@ -62,6 +62,8 @@ grunt.loadTasks('./tasks');
 
 grunt.initConfig({
     echo: {
-        param: 'hello'
+        param1: 'hello',
+        param2: 'hi'
+
     }
 });

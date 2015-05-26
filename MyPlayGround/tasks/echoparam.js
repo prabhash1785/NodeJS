@@ -6,8 +6,15 @@
 
 module.exports = function (grunt) {
 
-    grunt.registerMultiTask('echo', 'echoes the provided param', function(param) {
-       grunt.log.writeln('Param is: ' + param);
+    //this task doesn't need a configuration object
+    grunt.registerTask('sayhi', 'Say Hi', function(name) {
+        grunt.log.writeln('Hi ' + name);
+    })
+
+    //Multitask looks for targets defined in configuration object
+    grunt.registerMultiTask('echo', 'echoes the provided param', function(arg) {
+       //grunt.log.writeln('Arguement is: ' + arg);
+        grunt.log.writeln(this.target + ' :: ' + this.data);
     });
 
 }
