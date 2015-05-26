@@ -57,3 +57,11 @@ grunt.registerTask('validateandruntask', 'if task available then run given task'
 });
 
 grunt.registerTask('multitask', 'runs multiple tasks', ['gruntversion', 'default', 'hello:Ricky']);
+
+grunt.loadTasks('./tasks');
+
+grunt.initConfig({
+    echo: {
+        param: 'hello'
+    }
+});
