@@ -14,6 +14,9 @@ grunt.initConfig({
         param1: 'hello',
         param2: 'hi'
 
+    },
+    jshint: {
+       routes : ['routes/*.js']
     }
 });
 
