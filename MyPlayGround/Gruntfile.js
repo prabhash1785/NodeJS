@@ -6,6 +6,20 @@
 
 var grunt = require('grunt');
 
+//load tasks from tasks directory
+grunt.loadTasks('./tasks');
+
+grunt.initConfig({
+    echo: {
+        param1: 'hello',
+        param2: 'hi'
+
+    }
+});
+
+//load jshint task from NPM
+grunt.loadNpmTasks('grunt-contrib-jshint');
+
 //To run: grunt default or grunt
 grunt.registerTask('default', 'default task', function() {
     console.log('I am the default task.');
@@ -57,13 +71,3 @@ grunt.registerTask('validateandruntask', 'if task available then run given task'
 });
 
 grunt.registerTask('multitask', 'runs multiple tasks', ['gruntversion', 'default', 'hello:Ricky']);
-
-grunt.loadTasks('./tasks');
-
-grunt.initConfig({
-    echo: {
-        param1: 'hello',
-        param2: 'hi'
-
-    }
-});
