@@ -29,17 +29,26 @@ grunt.initConfig({
     },
     clean: {
         log: 'npm-debug.log',
-        temp: ['*.temporary']
+        temp: ['*.temporary'],
+        browserifyFiles: '.build'
     },
     watch: {
         files: ['Gruntfile.js', 'tasks/**/*.js', 'routes/**/*.js'],
         tasks: 'jshint'
+    },
+    browserify: {
+        webjs: {
+            files: {
+                '.build/bundle.js': ['routes/*.js', 'controllers/*.js']
+            }
+        }
     }
 });
 
 //load jshint task from NPM
 grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-contrib-watch');
+grunt.loadNpmTasks('grunt-browserify');
 
 //To run: grunt default or grunt
 grunt.registerTask('default', 'default task', function() {
