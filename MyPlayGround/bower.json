@@ -1,0 +1,23 @@
+{
+  "name": "MyPlayGround",
+  "version": "0.0.1",
+  "homepage": "https://github.com/prabhash1785/NodeJS",
+  "authors": [
+    "Prabhash Rathore <prabhashrathore@gmail.com>"
+  ],
+  "description": "Repo to play around with various node components",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
