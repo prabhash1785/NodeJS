@@ -20,6 +20,9 @@ grunt.initConfig({
             jshintrc: true
         },
         all : ['Gruntfile.js','routes/**/*.js', 'controllers/**/*.js', 'tasks/**/*.js']
+    },
+    clean: {
+        log: 'npm-debug.log'
     }
 });
 
