@@ -42,6 +42,13 @@ grunt.initConfig({
                 '.build/bundle.js': ['routes/*.js', 'controllers/*.js']
             }
         }
+    },
+    uglify: {
+        compress: {
+            files: {
+                '.build/bundle.min.js': ['.build/bundle.js']
+            }
+        }
     }
 });
 
@@ -49,6 +56,7 @@ grunt.initConfig({
 grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-browserify');
+grunt.loadNpmTasks('grunt-contrib-uglify');
 
 //To run: grunt default or grunt
 grunt.registerTask('default', 'default task', function() {
