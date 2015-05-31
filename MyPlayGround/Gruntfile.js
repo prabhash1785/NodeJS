@@ -9,6 +9,12 @@ var grunt = require('grunt');
 //load tasks from tasks directory
 grunt.loadTasks('./tasks');
 
+//use grunt-config-dir only when you are not using grunt.initConfig({})
+//this could be used to pass options config object from the actual tasks defined in external files
+//require('grunt-config-dir')(grunt, {
+//    configDir: require('path').resolve('tasks')
+//});
+
 grunt.initConfig({
     echo: {
         param1: 'hello',
@@ -22,7 +28,8 @@ grunt.initConfig({
         all : ['Gruntfile.js','routes/**/*.js', 'controllers/**/*.js', 'tasks/**/*.js']
     },
     clean: {
-        log: 'npm-debug.log'
+        log: 'npm-debug.log',
+        temp: ['*.temporary']
     }
 });
 
