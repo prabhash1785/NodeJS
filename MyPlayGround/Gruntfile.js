@@ -19,7 +19,7 @@ grunt.initConfig({
         options: {
             jshintrc: true
         },
-        all : ['Gruntfile.js','routes/**/*.js', 'controllers/**/*.js']
+        all : ['Gruntfile.js','routes/**/*.js', 'controllers/**/*.js', 'tasks/**/*.js']
     }
 });
 
