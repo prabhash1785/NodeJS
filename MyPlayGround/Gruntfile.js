@@ -16,7 +16,10 @@ grunt.initConfig({
 
     },
     jshint: {
-       routes : ['routes/*.js']
+        options: {
+            jshintrc: true
+        },
+        all : ['Gruntfile.js','routes/**/*.js', 'controllers/**/*.js']
     }
 });
 
@@ -30,8 +33,9 @@ grunt.registerTask('default', 'default task', function() {
 
 //To run: grunt hello:<param>
 grunt.registerTask('hello', 'greeting task', function(name) {
-   if(!name || !name.length)
-        grunt.warn('you need to provide a name');
+   if(!name || !name.length) {
+       grunt.warn('you need to provide a name');
+   }
 
     console.log('hello ' + name + '!');
 
