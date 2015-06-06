@@ -73,6 +73,37 @@ grunt.registerTask('hello', 'greeting task', function(name) {
 
 });
 
+//Accepts n number of args
+grunt.registerTask('hello2', 'greeting task two', function(name) {
+    if(!name || !name.length)
+        grunt.warn('you need to provide a name');
+    // unfortunately arguments is not an array,
+    // we need to convert it to use array methods like join()
+    var args = Array.prototype.slice.call(arguments);
+    var greet = 'hello ' + args.join(' ') + '!';
+    console.log(greet);
+});
+
+// this task can run tasks with n number of args
+grunt.registerTask('validateandruntaskv2', 'if task available then run given task with multiple args', function(taskname) {
+    if(!taskname || !taskname.length) {
+        grunt.fail.fatal('task name is needed to run this task');
+    }
+
+    var taskToCall = taskname;
+    for(var i = 1; i < arguments.length; i++) {
+        taskToCall += ':' + arguments[i];
+    }
+    console.log(taskToCall);
+
+    if(!grunt.task.exists(taskname)) {
+        grunt.log.writeln('this task does not exist!');
+    } else {
+        grunt.log.writeln(taskname + ' exists. Going to run this task');
+        grunt.task.run(taskToCall);
+    }
+});
+
 grunt.registerTask('sum', 'sum of two numbers', function sum(a, b) {
     if(!a || !b) {
         grunt.warn('This task needs two parameters to print the sum');
