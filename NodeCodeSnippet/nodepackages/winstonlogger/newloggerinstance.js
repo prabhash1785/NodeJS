@@ -1,6 +1,8 @@
 /**
  * Create new logger instance.
  *
+ * Winston info log level logs everything including info, warning and error. But error level just logs error.
+ *
  * Created by prrathore on 2/1/15.
  */
 
@@ -12,7 +14,7 @@ var logger = new winston.Logger({
                 colorize: true
             }),
             new winston.transports.File({
-                level: "error",
+                level: "info",
                 filename: "log/output.log"
             })
         ]
