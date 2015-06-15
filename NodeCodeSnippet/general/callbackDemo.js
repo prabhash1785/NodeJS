@@ -4,14 +4,33 @@
  * Created by prrathore on 6/15/15.
  */
 
-function addNumbers(param1, param2) {
-    console.log('Pre-sum logging');
-    setTimeout(sum(param1, param2), 4000);
-    console.log('Post sum logging');
+'use strict';
+
+function multiply(a, b, callback) {
+    if(typeof callback !== 'function') {
+        throw new Error('callback function is needed');
+    }
+
+    if(a === undefined || b === undefined) {
+        return callback('At least one of the numbers are undefined');
+    }
+
+    console.log('Going to calculate product of two numbers')
+    return callback(null, parseInt(a) * parseInt(b));
+
 }
 
-function sum(a, b) {
-    console.log('Sum: ' + (parseInt(a)  + parseInt(b)));
-}
+(function() {
+    console.log('Pre-callback..');
+    multiply(2, 9, function(error, result) {
+        if(error) {
+            console.log(error);
+            return;
+        }
 
-addNumbers(20, 40);
+        console.log('Result: ' + result);
+    });
+    console.log('Post call back log.')
+})();
+
+
