@@ -5,5 +5,13 @@
  */
 
 function addNumbers(param1, param2) {
-    setTimeout()
+    console.log('Pre-sum logging');
+    setTimeout(sum(param1, param2), 4000);
+    console.log('Post sum logging');
 }
+
+function sum(a, b) {
+    console.log('Sum: ' + (parseInt(a)  + parseInt(b)));
+}
+
+addNumbers(20, 40);
