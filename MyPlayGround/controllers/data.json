@@ -1,0 +1,802 @@
+{
+  "items": [
+    {
+      "extension": {
+        "purposes": [
+          "PERSONAL"
+        ],
+        "channels": [
+          "PERSONAL_PAYMENT"
+        ],
+        "buyer_notes": "limin test",
+        "is_rtr_applicable": false,
+        "is_balance_affecting": true,
+        "debit_credit_code": "DEBIT",
+        "running_balance": {
+          "currency_code": "USD",
+          "value": "185.00"
+        }
+      },
+      "extensions": {
+        "payment_properties": {
+          "purposes": [
+            "PERSONAL"
+          ],
+          "channels": [
+            "PERSONAL_PAYMENT"
+          ],
+          "buyer_notes": "limin test",
+          "is_rtr_applicable": false,
+          "is_balance_affecting": true,
+          "debit_credit_code": "DEBIT",
+          "running_balance": {
+            "currency_code": "USD",
+            "value": "185.00"
+          }
+        }
+      },
+      "id": "49A90575YS9309908",
+      "status": "COMPLETED",
+      "fee": {
+        "currency_code": "USD",
+        "value": "0.00"
+      },
+      "net": {
+        "currency_code": "USD",
+        "value": "10.00"
+      },
+      "subtype": "PAYMENT",
+      "gross": {
+        "currency_code": "USD",
+        "value": "10.00"
+      },
+      "counterparty": {
+        "name": "Chinta Raja Dayanand PER",
+        "email": "cdayanand-per@paypal.com",
+        "first_name": "Chinta Raja Dayanand",
+        "last_name": "PER"
+      },
+      "activity_type": "PAYMENT",
+      "time_created": "2016-04-01T19:42:23.000Z",
+      "is_primary": true
+    },
+    {
+      "extension": {
+        "purposes": [
+          "PURCHASE_GOODS"
+        ],
+        "channels": [
+          "PERSONAL_PAYMENT"
+        ],
+        "buyer_notes": "limin test",
+        "is_rtr_applicable": false,
+        "is_balance_affecting": true,
+        "debit_credit_code": "DEBIT",
+        "running_balance": {
+          "currency_code": "USD",
+          "value": "195.00"
+        }
+      },
+      "extensions": {
+        "payment_properties": {
+          "purposes": [
+            "PURCHASE_GOODS"
+          ],
+          "channels": [
+            "PERSONAL_PAYMENT"
+          ],
+          "buyer_notes": "limin test",
+          "is_rtr_applicable": false,
+          "is_balance_affecting": true,
+          "debit_credit_code": "DEBIT",
+          "running_balance": {
+            "currency_code": "USD",
+            "value": "195.00"
+          }
+        }
+      },
+      "id": "1B932582WM909782P",
+      "status": "COMPLETED",
+      "fee": {
+        "currency_code": "USD",
+        "value": "0.00"
+      },
+      "net": {
+        "currency_code": "USD",
+        "value": "5.00"
+      },
+      "subtype": "PAYMENT",
+      "gross": {
+        "currency_code": "USD",
+        "value": "5.00"
+      },
+      "counterparty": {
+        "name": "Chinta Raja Dayanand PER",
+        "email": "cdayanand-per@paypal.com",
+        "first_name": "Chinta Raja Dayanand",
+        "last_name": "PER"
+      },
+      "activity_type": "PAYMENT",
+      "time_created": "2016-04-01T19:41:31.000Z",
+      "is_primary": true
+    },
+    {
+      "extension": {
+        "purposes": [
+          "PURCHASE_SERVICES"
+        ],
+        "channels": [
+          "PERSONAL_PAYMENT"
+        ],
+        "is_rtr_applicable": false,
+        "is_balance_affecting": true,
+        "debit_credit_code": "CREDIT",
+        "running_balance": {
+          "currency_code": "GBP",
+          "value": "0.00"
+        }
+      },
+      "extensions": {
+        "payment_properties": {
+          "purposes": [
+            "PURCHASE_SERVICES"
+          ],
+          "channels": [
+            "PERSONAL_PAYMENT"
+          ],
+          "is_rtr_applicable": false,
+          "is_balance_affecting": true,
+          "debit_credit_code": "CREDIT",
+          "running_balance": {
+            "currency_code": "GBP",
+            "value": "0.00"
+          }
+        }
+      },
+      "id": "47G36545JE101124G",
+      "status": "COMPLETED",
+      "fee": {
+        "currency_code": "GBP",
+        "value": "0.01"
+      },
+      "net": {
+        "currency_code": "GBP",
+        "value": "0.00"
+      },
+      "subtype": "PAYMENT",
+      "gross": {
+        "currency_code": "GBP",
+        "value": "0.01"
+      },
+      "counterparty": {
+        "name": "Voyage Traval",
+        "email": "shafic-uk-bus1@paypal.com",
+        "business_name": "Voyage Traval"
+      },
+      "activity_type": "PAYMENT",
+      "time_created": "2016-04-01T12:05:20.000Z",
+      "is_primary": true
+    },
+    {
+      "extension": {
+        "purposes": [
+          "PURCHASE_SERVICES"
+        ],
+        "channels": [
+          "PERSONAL_PAYMENT"
+        ],
+        "is_rtr_applicable": false,
+        "is_balance_affecting": true,
+        "debit_credit_code": "CREDIT",
+        "running_balance": {
+          "currency_code": "GBP",
+          "value": "0.00"
+        }
+      },
+      "extensions": {
+        "payment_properties": {
+          "purposes": [
+            "PURCHASE_SERVICES"
+          ],
+          "channels": [
+            "PERSONAL_PAYMENT"
+          ],
+          "is_rtr_applicable": false,
+          "is_balance_affecting": true,
+          "debit_credit_code": "CREDIT",
+          "running_balance": {
+            "currency_code": "GBP",
+            "value": "0.00"
+          }
+        }
+      },
+      "id": "6SU26166CJ0212600",
+      "status": "COMPLETED",
+      "fee": {
+        "currency_code": "GBP",
+        "value": "0.01"
+      },
+      "net": {
+        "currency_code": "GBP",
+        "value": "0.00"
+      },
+      "subtype": "PAYMENT",
+      "gross": {
+        "currency_code": "GBP",
+        "value": "0.01"
+      },
+      "counterparty": {
+        "name": "Voyage Traval",
+        "email": "shafic-uk-bus1@paypal.com",
+        "business_name": "Voyage Traval"
+      },
+      "activity_type": "PAYMENT",
+      "time_created": "2016-03-31T11:54:54.000Z",
+      "is_primary": true
+    },
+    {
+      "extension": {
+        "purposes": [
+          "PURCHASE_SERVICES"
+        ],
+        "channels": [
+          "PERSONAL_PAYMENT"
+        ],
+        "is_rtr_applicable": false,
+        "is_balance_affecting": true,
+        "debit_credit_code": "CREDIT",
+        "running_balance": {
+          "currency_code": "GBP",
+          "value": "0.00"
+        }
+      },
+      "extensions": {
+        "payment_properties": {
+          "purposes": [
+            "PURCHASE_SERVICES"
+          ],
+          "channels": [
+            "PERSONAL_PAYMENT"
+          ],
+          "is_rtr_applicable": false,
+          "is_balance_affecting": true,
+          "debit_credit_code": "CREDIT",
+          "running_balance": {
+            "currency_code": "GBP",
+            "value": "0.00"
+          }
+        }
+      },
+      "id": "78526127B4737551E",
+      "status": "COMPLETED",
+      "fee": {
+        "currency_code": "GBP",
+        "value": "0.01"
+      },
+      "net": {
+        "currency_code": "GBP",
+        "value": "0.00"
+      },
+      "subtype": "PAYMENT",
+      "gross": {
+        "currency_code": "GBP",
+        "value": "0.01"
+      },
+      "counterparty": {
+        "name": "Voyage Traval",
+        "email": "shafic-uk-bus1@paypal.com",
+        "business_name": "Voyage Traval"
+      },
+      "activity_type": "PAYMENT",
+      "time_created": "2016-03-26T11:53:46.000Z",
+      "is_primary": true
+    },
+    {
+      "extension": {
+        "purposes": [
+          "PURCHASE_GOODS",
+          "INVOICE_PAYMENT"
+        ],
+        "is_rtr_applicable": false,
+        "is_balance_affecting": true,
+        "debit_credit_code": "CREDIT",
+        "invoice_id": "INV2-77QK-MXRL-47QJ-3YN7",
+        "running_balance": {
+          "currency_code": "USD",
+          "value": "18.82"
+        }
+      },
+      "extensions": {
+        "payment_properties": {
+          "purposes": [
+            "PURCHASE_GOODS",
+            "INVOICE_PAYMENT"
+          ],
+          "is_rtr_applicable": false,
+          "is_balance_affecting": true,
+          "debit_credit_code": "CREDIT",
+          "invoice_id": "INV2-77QK-MXRL-47QJ-3YN7",
+          "running_balance": {
+            "currency_code": "USD",
+            "value": "18.82"
+          }
+        }
+      },
+      "id": "4C092944GY398290T",
+      "status": "COMPLETED",
+      "fee": {
+        "currency_code": "USD",
+        "value": "0.59"
+      },
+      "net": {
+        "currency_code": "USD",
+        "value": "9.41"
+      },
+      "subtype": "PAYMENT",
+      "gross": {
+        "currency_code": "USD",
+        "value": "10.00"
+      },
+      "counterparty": {
+        "name": "The Artisan2",
+        "email": "shafic-us-bus1@paypal.com",
+        "business_name": "The Artisan2"
+      },
+      "activity_type": "PAYMENT",
+      "time_created": "2016-03-25T15:01:18.000Z",
+      "is_primary": true
+    },
+    {
+      "extension": {
+        "purposes": [
+          "PURCHASE_GOODS",
+          "INVOICE_PAYMENT"
+        ],
+        "is_rtr_applicable": false,
+        "is_balance_affecting": true,
+        "debit_credit_code": "CREDIT",
+        "invoice_id": "INV2-XVFM-B8HQ-AURM-FNSU",
+        "running_balance": {
+          "currency_code": "USD",
+          "value": "9.41"
+        }
+      },
+      "extensions": {
+        "payment_properties": {
+          "purposes": [
+            "PURCHASE_GOODS",
+            "INVOICE_PAYMENT"
+          ],
+          "is_rtr_applicable": false,
+          "is_balance_affecting": true,
+          "debit_credit_code": "CREDIT",
+          "invoice_id": "INV2-XVFM-B8HQ-AURM-FNSU",
+          "running_balance": {
+            "currency_code": "USD",
+            "value": "9.41"
+          }
+        }
+      },
+      "id": "3NV34329V5439235J",
+      "status": "COMPLETED",
+      "fee": {
+        "currency_code": "USD",
+        "value": "0.59"
+      },
+      "net": {
+        "currency_code": "USD",
+        "value": "9.41"
+      },
+      "subtype": "PAYMENT",
+      "gross": {
+        "currency_code": "USD",
+        "value": "10.00"
+      },
+      "counterparty": {
+        "name": "The Artisan2",
+        "email": "shafic-us-bus1@paypal.com",
+        "business_name": "The Artisan2"
+      },
+      "activity_type": "PAYMENT",
+      "time_created": "2016-03-24T21:37:45.000Z",
+      "is_primary": true
+    },
+    {
+      "extension": {
+        "purposes": [
+          "PURCHASE_SERVICES"
+        ],
+        "channels": [
+          "PERSONAL_PAYMENT"
+        ],
+        "is_rtr_applicable": false,
+        "is_balance_affecting": true,
+        "debit_credit_code": "CREDIT",
+        "running_balance": {
+          "currency_code": "GBP",
+          "value": "0.00"
+        }
+      },
+      "extensions": {
+        "payment_properties": {
+          "purposes": [
+            "PURCHASE_SERVICES"
+          ],
+          "channels": [
+            "PERSONAL_PAYMENT"
+          ],
+          "is_rtr_applicable": false,
+          "is_balance_affecting": true,
+          "debit_credit_code": "CREDIT",
+          "running_balance": {
+            "currency_code": "GBP",
+            "value": "0.00"
+          }
+        }
+      },
+      "id": "42K70825YE9346103",
+      "status": "COMPLETED",
+      "fee": {
+        "currency_code": "GBP",
+        "value": "0.01"
+      },
+      "net": {
+        "currency_code": "GBP",
+        "value": "0.00"
+      },
+      "subtype": "PAYMENT",
+      "gross": {
+        "currency_code": "GBP",
+        "value": "0.01"
+      },
+      "counterparty": {
+        "name": "Voyage Traval",
+        "email": "shafic-uk-bus1@paypal.com",
+        "business_name": "Voyage Traval"
+      },
+      "activity_type": "PAYMENT",
+      "time_created": "2016-03-21T11:51:34.000Z",
+      "is_primary": true
+    },
+    {
+      "extension": {
+        "purposes": [
+          "PURCHASE_SERVICES"
+        ],
+        "channels": [
+          "PERSONAL_PAYMENT"
+        ],
+        "is_rtr_applicable": false,
+        "is_balance_affecting": true,
+        "debit_credit_code": "CREDIT",
+        "running_balance": {
+          "currency_code": "GBP",
+          "value": "0.00"
+        }
+      },
+      "extensions": {
+        "payment_properties": {
+          "purposes": [
+            "PURCHASE_SERVICES"
+          ],
+          "channels": [
+            "PERSONAL_PAYMENT"
+          ],
+          "is_rtr_applicable": false,
+          "is_balance_affecting": true,
+          "debit_credit_code": "CREDIT",
+          "running_balance": {
+            "currency_code": "GBP",
+            "value": "0.00"
+          }
+        }
+      },
+      "id": "20411913W81937340",
+      "status": "COMPLETED",
+      "fee": {
+        "currency_code": "GBP",
+        "value": "0.01"
+      },
+      "net": {
+        "currency_code": "GBP",
+        "value": "0.00"
+      },
+      "subtype": "PAYMENT",
+      "gross": {
+        "currency_code": "GBP",
+        "value": "0.01"
+      },
+      "counterparty": {
+        "name": "Voyage Traval",
+        "email": "shafic-uk-bus1@paypal.com",
+        "business_name": "Voyage Traval"
+      },
+      "activity_type": "PAYMENT",
+      "time_created": "2016-03-19T11:59:25.000Z",
+      "is_primary": true
+    },
+    {
+      "extension": {
+        "memo": "YOU GOT MONEY",
+        "purposes": [
+          "PURCHASE_GOODS"
+        ],
+        "channels": [
+          "PERSONAL_PAYMENT"
+        ],
+        "buyer_notes": "Personal Message!",
+        "funding_instruments": [
+          "BANK_ACCOUNT"
+        ],
+        "is_rtr_applicable": false,
+        "is_balance_affecting": true,
+        "debit_credit_code": "DEBIT",
+        "running_balance": {
+          "currency_code": "USD",
+          "value": "0.00"
+        }
+      },
+      "extensions": {
+        "payment_properties": {
+          "memo": "YOU GOT MONEY",
+          "purposes": [
+            "PURCHASE_GOODS"
+          ],
+          "channels": [
+            "PERSONAL_PAYMENT"
+          ],
+          "buyer_notes": "Personal Message!",
+          "funding_instruments": [
+            "BANK_ACCOUNT"
+          ],
+          "is_rtr_applicable": false,
+          "is_balance_affecting": true,
+          "debit_credit_code": "DEBIT",
+          "running_balance": {
+            "currency_code": "USD",
+            "value": "0.00"
+          }
+        }
+      },
+      "id": "4RX90638YJ892871H",
+      "status": "COMPLETED",
+      "fee": {
+        "currency_code": "USD",
+        "value": "0.00"
+      },
+      "net": {
+        "currency_code": "USD",
+        "value": "120.00"
+      },
+      "subtype": "PAYMENT",
+      "gross": {
+        "currency_code": "USD",
+        "value": "120.00"
+      },
+      "counterparty": {
+        "name": "The Artisan",
+        "email": "shafic-us-bus1@paypal.com",
+        "business_name": "The Artisan"
+      },
+      "activity_type": "PAYMENT",
+      "time_created": "2016-03-15T16:30:47.000Z",
+      "is_primary": true
+    },
+    {
+      "extension": {
+        "purposes": [
+          "PURCHASE_SERVICES"
+        ],
+        "channels": [
+          "PERSONAL_PAYMENT"
+        ],
+        "is_rtr_applicable": false,
+        "is_balance_affecting": true,
+        "debit_credit_code": "CREDIT",
+        "running_balance": {
+          "currency_code": "GBP",
+          "value": "0.00"
+        }
+      },
+      "extensions": {
+        "payment_properties": {
+          "purposes": [
+            "PURCHASE_SERVICES"
+          ],
+          "channels": [
+            "PERSONAL_PAYMENT"
+          ],
+          "is_rtr_applicable": false,
+          "is_balance_affecting": true,
+          "debit_credit_code": "CREDIT",
+          "running_balance": {
+            "currency_code": "GBP",
+            "value": "0.00"
+          }
+        }
+      },
+      "id": "8SV030075F329032F",
+      "status": "COMPLETED",
+      "fee": {
+        "currency_code": "GBP",
+        "value": "0.01"
+      },
+      "net": {
+        "currency_code": "GBP",
+        "value": "0.00"
+      },
+      "subtype": "PAYMENT",
+      "gross": {
+        "currency_code": "GBP",
+        "value": "0.01"
+      },
+      "counterparty": {
+        "name": "Voyage Traval",
+        "email": "shafic-uk-bus1@paypal.com",
+        "business_name": "Voyage Traval"
+      },
+      "activity_type": "PAYMENT",
+      "time_created": "2016-03-15T11:54:21.000Z",
+      "is_primary": true
+    },
+    {
+      "extension": {
+        "purposes": [
+          "PURCHASE_SERVICES"
+        ],
+        "channels": [
+          "PERSONAL_PAYMENT"
+        ],
+        "is_rtr_applicable": false,
+        "is_balance_affecting": true,
+        "debit_credit_code": "CREDIT",
+        "running_balance": {
+          "currency_code": "GBP",
+          "value": "0.00"
+        }
+      },
+      "extensions": {
+        "payment_properties": {
+          "purposes": [
+            "PURCHASE_SERVICES"
+          ],
+          "channels": [
+            "PERSONAL_PAYMENT"
+          ],
+          "is_rtr_applicable": false,
+          "is_balance_affecting": true,
+          "debit_credit_code": "CREDIT",
+          "running_balance": {
+            "currency_code": "GBP",
+            "value": "0.00"
+          }
+        }
+      },
+      "id": "0BL35633X21844510",
+      "status": "COMPLETED",
+      "fee": {
+        "currency_code": "GBP",
+        "value": "0.01"
+      },
+      "net": {
+        "currency_code": "GBP",
+        "value": "0.00"
+      },
+      "subtype": "PAYMENT",
+      "gross": {
+        "currency_code": "GBP",
+        "value": "0.01"
+      },
+      "counterparty": {
+        "name": "Voyage Traval",
+        "email": "shafic-uk-bus1@paypal.com",
+        "business_name": "Voyage Traval"
+      },
+      "activity_type": "PAYMENT",
+      "time_created": "2016-03-13T11:55:48.000Z",
+      "is_primary": true
+    },
+    {
+      "extension": {
+        "purposes": [
+          "PAYOUT_PAYMENT"
+        ],
+        "is_rtr_applicable": false,
+        "is_balance_affecting": true,
+        "debit_credit_code": "CREDIT",
+        "running_balance": {
+          "currency_code": "USD",
+          "value": "2.02"
+        }
+      },
+      "extensions": {
+        "payment_properties": {
+          "purposes": [
+            "PAYOUT_PAYMENT"
+          ],
+          "is_rtr_applicable": false,
+          "is_balance_affecting": true,
+          "debit_credit_code": "CREDIT",
+          "running_balance": {
+            "currency_code": "USD",
+            "value": "2.02"
+          }
+        }
+      },
+      "id": "31R842558A4863115",
+      "status": "COMPLETED",
+      "fee": {
+        "currency_code": "USD",
+        "value": "0.00"
+      },
+      "net": {
+        "currency_code": "USD",
+        "value": "1.01"
+      },
+      "subtype": "PAYMENT",
+      "gross": {
+        "currency_code": "USD",
+        "value": "1.01"
+      },
+      "counterparty": {
+        "name": "Viswa's Business",
+        "email": "vvaradarajan@paypal.com",
+        "business_name": "Viswa's Business"
+      },
+      "activity_type": "PAYMENT",
+      "time_created": "2016-02-17T13:36:17.000Z",
+      "is_primary": true
+    },
+    {
+      "extension": {
+        "purposes": [
+          "PAYOUT_PAYMENT"
+        ],
+        "is_rtr_applicable": false,
+        "is_balance_affecting": true,
+        "debit_credit_code": "CREDIT",
+        "running_balance": {
+          "currency_code": "USD",
+          "value": "1.01"
+        }
+      },
+      "extensions": {
+        "payment_properties": {
+          "purposes": [
+            "PAYOUT_PAYMENT"
+          ],
+          "is_rtr_applicable": false,
+          "is_balance_affecting": true,
+          "debit_credit_code": "CREDIT",
+          "running_balance": {
+            "currency_code": "USD",
+            "value": "1.01"
+          }
+        }
+      },
+      "id": "7MB65463M7813990P",
+      "status": "COMPLETED",
+      "fee": {
+        "currency_code": "USD",
+        "value": "0.00"
+      },
+      "net": {
+        "currency_code": "USD",
+        "value": "1.01"
+      },
+      "subtype": "PAYMENT",
+      "gross": {
+        "currency_code": "USD",
+        "value": "1.01"
+      },
+      "counterparty": {
+        "name": "Viswa's Business",
+        "email": "vvaradarajan@paypal.com",
+        "business_name": "Viswa's Business"
+      },
+      "activity_type": "PAYMENT",
+      "time_created": "2016-02-17T13:35:51.000Z",
+      "is_primary": true
+    }
+  ]
+}
